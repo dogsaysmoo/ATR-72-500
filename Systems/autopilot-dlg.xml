@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+	<name>autopilot-dlg</name>
+	<layout>vbox</layout>
+
+	<group>
+		<layout>hbox</layout>
+
+		<empty>
+			<stretch>1</stretch>
+		</empty>
+
+		<text>
+			<label>Autopilot Settings</label>
+		</text>
+
+		<empty>
+			<stretch>1</stretch>
+		</empty>
+
+		<button>
+			<pref-width>16</pref-width>
+			<pref-height>16</pref-height>
+			<legend></legend>
+			<keynum>27</keynum>
+			<border>2</border>
+			<binding>
+				<command>dialog-close</command>
+			</binding>
+		</button>
+	</group>
+
+	<hrule/>
+
+	<group>
+		<layout>hbox</layout>
+
+		<checkbox>
+			<label>A/P on</label>
+			<property>autopilot/settings/engaged</property>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<live>true</live>
+		</checkbox>
+		<checkbox>
+			<label>Y/D on</label>
+			<property>autopilot/settings/yaw-damper</property>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<live>true</live>
+		</checkbox>
+		<checkbox>
+			<label>F/D on</label>
+			<property>autopilot/settings/flight-director</property>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<live>true</live>
+		</checkbox>
+	</group>
+
+	<button>
+		<legend>STBY (All modes off)</legend>
+		<binding>
+			<command>dialog-apply</command>
+		</binding>
+		<binding>
+			<command>nasal</command>
+			<script>
+			 autopilot.set_lateral("");
+			 autopilot.set_vertical("");
+			</script>
+		</binding>
+	</button>
+
+	<group>
+		<layout>hbox</layout>
+
+		<hrule>
+			<stretch type="bool">true</stretch>
+		</hrule>
+		<text>
+			<label>Lateral modes</label>
+		</text>
+		<hrule>
+			<stretch type="bool">true</stretch>
+		</hrule>
+	</group>
+
+	<group>
+		<layout>hbox</layout>
+
+		<button>
+			<legend>HDG</legend>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>
+				 autopilot.set_lateral("dg-heading-hold");
+				</script>
+			</binding>
+		</button>
+		<button>
+			<legend>NAV</legend>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>
+				 autopilot.set_lateral("nav1-hold");
+				</script>
+			</binding>
+		</button>
+		<button>
+			<legend>APP</legend>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>
+				 autopilot.set_lateral("gs1-hold");
+				 autopilot.set_vertical("gs1-hold");
+				</script>
+			</binding>
+		</button>
+		<button>
+			<legend>BC</legend>
+<!-- Not implemented. -->
+<!--			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<binding>
+				<command>property-toggle</command>
+				<property>autopilot/settings/backcourse</property>
+			</binding>-->
+			<binding>
+				<command>nasal</command>
+				<script>
+				 gui.popupTip("Not implemented.");
+				</script>
+			</binding>
+		</button>
+	</group>
+
+	<group>
+		<layout>table</layout>
+
+		<text>
+			<row>0</row>
+			<col>0</col>
+			<halign>right</halign>
+			<label>Heading bug:</label>
+		</text>
+
+		<input>
+			<row>0</row>
+			<col>1</col>
+			<property>autopilot/settings/heading-bug-deg</property>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<live type="bool">true</live>
+		</input>
+	</group>
+
+	<group>
+		<layout>hbox</layout>
+
+		<button>
+			<legend>BANK</legend>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<binding>
+				<command>property-cycle</command>
+				<property>autopilot/settings/bank-limit-deg</property>
+				<value>27</value>
+				<value>15</value>
+			</binding>
+		</button>
+		<text>
+			<label>Bank limit: 00°</label>
+			<format>Bank limit: %2.0f°</format>
+			<property>autopilot/settings/bank-limit-deg</property>
+			<live type="bool">true</live>
+		</text>
+	</group>
+
+	<group>
+		<layout>hbox</layout>
+
+		<hrule>
+			<stretch type="bool">true</stretch>
+		</hrule>
+		<text>
+			<label>Vertical modes</label>
+		</text>
+		<hrule>
+			<stretch type="bool">true</stretch>
+		</hrule>
+	</group>
+
+	<group>
+		<layout>hbox</layout>
+
+		<button>
+			<legend>IAS</legend>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>
+				 autopilot.set_vertical("speed-with-pitch");
+				</script>
+			</binding>
+		</button>
+		<button>
+			<legend>VS</legend>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>
+				 autopilot.set_vertical("vertical-speed-hold");
+				</script>
+			</binding>
+		</button>
+		<button>
+			<legend>ALT</legend>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>
+				 autopilot.set_vertical("altitude-hold");
+				</script>
+			</binding>
+		</button>
+	</group>
+
+	<group>
+		<layout>table</layout>
+
+		<text>
+			<row>0</row>
+			<col>0</col>
+			<halign>right</halign>
+			<label>Pitch:</label>
+		</text>
+
+		<input>
+			<row>0</row>
+			<col>1</col>
+			<property>autopilot/settings/target-pitch-deg</property>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<live type="bool">true</live>
+		</input>
+
+		<text>
+			<row>1</row>
+			<col>0</col>
+			<halign>right</halign>
+			<label>IAS with pitch:</label>
+		</text>
+
+		<input>
+			<row>1</row>
+			<col>1</col>
+			<property>autopilot/settings/target-speed-kt</property>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<live type="bool">true</live>
+		</input>
+
+		<text>
+			<row>2</row>
+			<col>0</col>
+			<halign>right</halign>
+			<label>Vertical speed:</label>
+		</text>
+
+		<input>
+			<row>2</row>
+			<col>1</col>
+			<property>autopilot/settings/vertical-speed-fpm</property>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<live type="bool">true</live>
+		</input>
+
+		<text>
+			<row>3</row>
+			<col>0</col>
+			<halign>right</halign>
+			<label>Altitude:</label>
+		</text>
+
+		<input>
+			<row>3</row>
+			<col>1</col>
+			<property>autopilot/settings/target-altitude-ft</property>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<live type="bool">true</live>
+		</input>
+	</group>
+
+	<hrule />
+
+	<group>
+		<layout>vbox</layout>
+
+		<button>
+			<legend>Close</legend>
+			<default>true</default>
+			<key>Esc</key>
+			<padding>10</padding>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<binding>
+				<command>dialog-close</command>
+			</binding>
+		</button>
+	</group>
+
+</PropertyList>

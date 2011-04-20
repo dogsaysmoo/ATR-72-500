@@ -1,0 +1,236 @@
+<?xml version="1" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<!-- B1900D Altimeter -->
+	<!-- By Syd Adams -->
+
+	<path>altimeter.ac</path>
+
+	<!-- PARAMETERS -->
+	<params>
+		<indicated-altitude-ft>instrumentation/altimeter[0]/indicated-altitude-ft</indicated-altitude-ft>
+		<setting-inhg>instrumentation/altimeter[0]/setting-inhg</setting-inhg>
+		<!-- Not actually used, just for reference -->
+		<inhg-to-mb type="double">33.8637526</inhg-to-mb>
+	</params>
+
+	<!-- ANIMATIONS -->
+
+
+	<!-- Lighting -->
+	<animation> 
+		<object-name>knob</object-name>
+		<type>material</type>
+		<emission>
+			<factor-prop>controls/lighting/panel-norm</factor-prop>
+			<red>0.55</red>
+			<green>0.24</green>
+			<blue>0.10</blue>
+		</emission>
+	</animation>
+	<animation>
+		<object-name>AltFace</object-name>
+		<object-name>altnum10000</object-name>
+		<object-name>altnum1000</object-name>
+		<object-name>altnum100</object-name>
+		<object-name>inhg01</object-name>
+		<object-name>inhg02</object-name>
+		<object-name>inhg03</object-name>
+		<object-name>inhg04</object-name>
+		<object-name>mb01</object-name>
+		<object-name>mb02</object-name>
+		<object-name>mb03</object-name>
+		<object-name>mb04</object-name>
+		<type>material</type>
+		<emission>
+			<factor-prop>controls/lighting/instruments-norm</factor-prop>
+			<red>0.55</red>
+			<green>0.24</green>
+			<blue>0.10</blue>
+		</emission>
+	</animation>
+
+	<!-- Altimeter needle -->
+	<animation>
+		<type>rotate</type>
+		<object-name>ALTneedle</object-name>
+		<property alias="../../params/indicated-altitude-ft" />
+		<factor>0.36</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<!-- Altimeter drums -->
+	<animation>
+		<type>textranslate</type>
+		<object-name>altnum100</object-name>
+		<property alias="../../params/indicated-altitude-ft" />
+		<factor>0.001</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>altnum1000</object-name>
+		<property alias="../../params/indicated-altitude-ft" />
+		<factor>0.0001</factor>
+		<step>1000</step>
+		<scroll>20</scroll>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>altnum10000</object-name>
+		<property alias="../../params/indicated-altitude-ft" />
+		<factor>0.00001</factor>
+		<step>10000</step>
+		<scroll>20</scroll>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<!-- Pressure drums -->
+	<animation>
+		<type>textranslate</type>
+		<object-name>inhg01</object-name>
+		<property alias="../../params/setting-inhg" />
+		<factor>0.01</factor>
+		<step>10</step>
+		<bias>0.005</bias>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>inhg02</object-name>
+		<property alias="../../params/setting-inhg" />
+		<factor>0.1</factor>
+		<step>1</step>
+		<bias>0.005</bias>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>inhg03</object-name>
+		<property alias="../../params/setting-inhg" />
+		<step>0.1</step>
+		<bias>0.005</bias>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>inhg04</object-name>
+		<property alias="../../params/setting-inhg" />
+		<factor>10.0</factor>
+		<step>0.01</step>
+		<bias>0.005</bias>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>mb01</object-name>
+		<property alias="../../params/setting-inhg" />
+		<factor>0.003386375</factor>
+		<step>29.530099981</step>33.8637526
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>mb02</object-name>
+		<property alias="../../params/setting-inhg" />
+		<factor>0.033863753</factor>
+		<step>2.953009998</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>mb03</object-name>
+		<property alias="../../params/setting-inhg" />
+		<factor>0.338637526</factor>
+		<step>0.295301</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>mb04</object-name>
+		<property alias="../../params/setting-inhg" />
+		<factor>3.38637526</factor>
+		<step>0.0295301</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<!-- Pressure setting knob -->
+	<animation>
+		<type>pick</type>
+		<object-name>knob</object-name>
+		<action>
+			<button>0</button>
+			<button>3</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property alias="../../../../params/setting-inhg" />
+				<step>0.01</step>
+				<max>33</max>
+			</binding>
+		</action>
+		<action>
+			<button>1</button>
+			<button>4</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property alias="../../../../params/setting-inhg" />
+				<step>-0.01</step>
+				<min>26</min>
+			</binding>
+		</action>
+	</animation>
+
+</PropertyList>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<fx>
+		<!-- Engines (outside) -->
+		<engine>
+			<name>Left N2 1</name>
+			<mode>looped</mode>
+			<path>Sounds/turbine_loop.wav</path>
+			<property>engines/engine[0]/n2</property>
+			<condition>
+				<and>
+					<greater-than>
+						<property>engines/engine[0]/n2</property>
+						<value>5</value>
+					</greater-than>
+					<not>
+						<property>sim/current-view/internal</property>
+					</not>
+				</and>
+			</condition>
+			<volume>
+				<property>engines/engine[0]/n2</property>
+				<factor>0.07</factor>
+			</volume>
+			<volume>
+				<property>sim/sound/effects/volume</property>
+			</volume>
+			<pitch>
+				<property>engines/engine[0]/n2</property>
+				<factor>0.005</factor>
+			</pitch>
+			<position>
+				<x>-3</x>
+				<y>-4</y>
+				<z>-0.5</z>
+			</position>
+		</engine>
+		<engine>
+			<name>Left N2 2</name>
+			<mode>looped</mode>
+			<path>Sounds/rotor.wav</path>
+			<property>engines/engine[0]/n2</property>
+			<condition>
+				<and>
+					<greater-than>
+						<property>engines/engine[0]/n2</property>
+						<value>5</value>
+					</greater-than>
+					<not>
+						<property>sim/current-view/internal</property>
+					</not>
+				</and>
+			</condition>
+			<volume>
+				<property>engines/engine[0]/n2</property>
+				<factor>0.07</factor>
+			</volume>
+			<volume>
+				<property>sim/sound/effects/volume</property>
+			</volume>
+			<pitch>
+				<property>engines/engine[0]/n2</property>
+				<factor>0.005</factor>
+			</pitch>
+			<position>
+				<x>-3</x>
+				<y>-4</y>
+				<z>-0.5</z>
+			</position>
+		</engine>
+
+		<engine>
+			<name>Right N2 1</name>
+			<mode>looped</mode>
+			<path>Sounds/turbine_loop.wav</path>
+			<property>engines/engine[1]/n2</property>
+			<condition>
+				<and>
+					<greater-than>
+						<property>engines/engine[1]/n2</property>
+						<value>5</value>
+					</greater-than>
+					<not>
+						<property>sim/current-view/internal</property>
+					</not>
+				</and>
+			</condition>
+			<volume>
+				<property>engines/engine[1]/n2</property>
+				<factor>0.07</factor>
+			</volume>
+			<volume>
+				<property>sim/sound/effects/volume</property>
+			</volume>
+			<pitch>
+				<property>engines/engine[1]/n2</property>
+				<factor>0.005</factor>
+			</pitch>
+			<position>
+				<x>-3</x>
+				<y>4</y>
+				<z>-0.5</z>
+			</position>
+		</engine>
+		<engine>
+			<name>Right N2 2</name>
+			<mode>looped</mode>
+			<path>Sounds/rotor.wav</path>
+			<property>engines/engine[1]/n2</property>
+			<condition>
+				<and>
+					<greater-than>
+						<property>engines/engine[1]/n2</property>
+						<value>5</value>
+					</greater-than>
+					<not>
+						<property>sim/current-view/internal</property>
+					</not>
+				</and>
+			</condition>
+			<volume>
+				<property>engines/engine[1]/n2</property>
+				<factor>0.07</factor>
+			</volume>
+			<volume>
+				<property>sim/sound/effects/volume</property>
+			</volume>
+			<pitch>
+				<property>engines/engine[1]/n2</property>
+				<factor>0.005</factor>
+			</pitch>
+			<position>
+				<x>-3</x>
+				<y>4</y>
+				<z>-0.5</z>
+			</position>
+		</engine>
+
+		<!-- Engines (inside -->
+		<engine>
+			<name>Left N2 inside</name>
+			<mode>looped</mode>
+			<path>Sounds/turbine_loop.wav</path>
+			<property>engines/engine[0]/n2</property>
+			<condition>
+				<and>
+					<greater-than>
+						<property>engines/engine[0]/n2</property>
+						<value>5</value>
+					</greater-than>
+					<property>sim/current-view/internal</property>
+				</and>
+			</condition>
+			<volume>
+				<property>sim/sound/effects/volume</property>
+			</volume>
+			<pitch>
+				<property>engines/engine[0]/n2</property>
+				<factor>0.005</factor>
+			</pitch>
+		</engine>
+		<engine>
+			<name>Right N2 inside</name>
+			<mode>looped</mode>
+			<path>Sounds/turbine_loop.wav</path>
+			<property>engines/engine[1]/n2</property>
+			<condition>
+				<and>
+					<greater-than>
+						<property>engines/engine[1]/n2</property>
+						<value>5</value>
+					</greater-than>
+					<property>sim/current-view/internal</property>
+				</and>
+			</condition>
+			<volume>
+				<property>sim/sound/effects/volume</property>
+			</volume>
+			<pitch>
+				<property>engines/engine[1]/n2</property>
+				<factor>0.005</factor>
+			</pitch>
+		</engine>
+
+		<!-- Flaps -->
+		<flaps>
+			<name>Flaps</name>
+			<mode>in-transit</mode>
+			<path>Sounds/flaps.wav</path>
+			<property>surface-positions/flap-pos-norm</property>
+			<volume>
+				<property>sim/sound/effects/volume</property>
+				<factor>4</factor>
+			</volume>
+		</flaps>
+
+		<!-- Gear -->
+		<gear>
+			<name>Nose landing gear</name>
+			<mode>in-transit</mode>
+			<path>Sounds/gear.wav</path>
+			<property>gear/gear[0]/position-norm</property>
+			<volume>
+				<property>sim/sound/effects/volume</property>
+				<factor>1.5</factor>
+			</volume>
+		</gear>
+		<gear>
+			<name>Port landing gear</name>
+			<mode>in-transit</mode>
+			<path>Sounds/gear.wav</path>
+			<property>gear/gear[1]/position-norm</property>
+			<volume>
+				<property>sim/sound/effects/volume</property>
+				<factor>1.5</factor>
+			</volume>
+		</gear>
+		<gear>
+			<name>Starboard landing gear</name>
+			<mode>in-transit</mode>
+			<path>Sounds/gear.wav</path>
+			<property>gear/gear[2]/position-norm</property>
+			<volume>
+				<property>sim/sound/effects/volume</property>
+				<factor>1.5</factor>
+			</volume>
+		</gear>
+
+		<!-- Switch effects -->
+		<click>
+			<name>Switch click</name>
+			<mode>once</mode>
+			<path>Sounds/click.wav</path>
+			<condition>
+				<property>sim/sound/click</property>
+			</condition>
+		</click>
+		<sign>
+			<name>Passenger sign</name>
+			<mode>once</mode>
+			<path>Aircraft/ATR-72-500/Sounds/cabinalert.wav</path>
+			<condition>
+				<property>sim/sound/passenger-sign</property>
+			</condition>
+		</sign>
+	</fx>
+
+</PropertyList>

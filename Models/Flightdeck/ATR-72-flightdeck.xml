@@ -1,0 +1,1154 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<path>ATR-72-flightdeck.ac</path>
+
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>2000</max-m>
+	</animation>
+
+	<!-- Panels -->
+	<model>
+		<path>Aircraft/ATR-72-500/Models/Flightdeck/OHPanel/ohpanel.xml</path>
+		<offsets>
+			<x-m>-0.983</x-m>
+			<y-m>0</y-m>
+			<z-m>1.738</z-m>
+			<pitch-deg>70</pitch-deg>
+		</offsets>
+	</model>
+
+	<!-- Instruments -->
+	<!-- Pilot side -->
+	<model>
+		<path>Aircraft/ATR-72-500/Models/Instruments/EADI/EADI.xml</path>
+		<overlay>
+			<params>
+				<indicated-pitch-deg>instrumentation/attitude-indicator[0]/indicated-pitch-deg</indicated-pitch-deg>
+				<indicated-roll-deg>instrumentation/attitude-indicator[0]/indicated-roll-deg</indicated-roll-deg>
+				<indicated-slip-skid>instrumentation/slip-skid-ball[0]/indicated-slip-skid</indicated-slip-skid>
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>-1.645</x-m>
+			<y-m>-0.56</y-m>
+			<z-m>1.002</z-m>
+			<pitch-deg>-5.3</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/ATR-72-500/Models/Instruments/EHSI/EHSI.xml</path>
+		<offsets>
+			<x-m>-1.631</x-m>
+			<y-m>-0.56</y-m>
+			<z-m>0.852</z-m>
+			<pitch-deg>-5.3</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/ATR-72-500/Models/Instruments/ASI300/asi300.xml</path>
+		<overlay>
+			<params>
+				<airspeed-limit-kt>instrumentation/airspeed-indicator[0]/airspeed-limit-kt</airspeed-limit-kt>
+				<indicated-speed-kt>instrumentation/airspeed-indicator[0]/indicated-speed-kt</indicated-speed-kt>
+				<index n="0">instrumentation/airspeed-indicator[0]/index[0]</index>
+				<index n="1">instrumentation/airspeed-indicator[0]/index[1]</index>
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>-1.642</x-m>
+			<y-m>-0.687</y-m>
+			<z-m>0.99</z-m>
+			<pitch-deg>-5.3</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/ATR-72-500/Models/Instruments/Clock/clock.xml</path>
+		<overlay>
+			<params>
+				<indicated-hour>instrumentation/clock[0]/local-hour</indicated-hour>
+				<indicated-min>instrumentation/clock[0]/indicated-min</indicated-min>
+				<indicated-sec>instrumentation/clock[0]/indicated-sec</indicated-sec>
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>-1.638</x-m>
+			<y-m>-0.768</y-m>
+			<z-m>0.945</z-m>
+			<pitch-deg>-5.3</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/ATR-72-500/Models/Instruments/VOR/VOR.xml</path>
+		<overlay>
+			<params>
+				<indicated-heading-deg>orientation/heading-magnetic-deg</indicated-heading-deg>
+				<nav-display n="0">instrumentation/nav-compass[0]/nav-display[0]</nav-display>
+				<nav-display n="1">instrumentation/nav-compass[0]/nav-display[1]</nav-display>
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>-1.633</x-m>
+			<y-m>-0.687</y-m>
+			<z-m>0.891</z-m>
+			<pitch-deg>-5.3</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/ATR-72-500/Models/Instruments/Altimeter/altimeter.xml</path>
+		<overlay>
+			<params>
+				<indicated-altitude-ft>instrumentation/altimeter[0]/indicated-altitude-ft</indicated-altitude-ft>
+				<setting-inhg>instrumentation/altimeter[0]/setting-inhg</setting-inhg>
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>-1.642</x-m>
+			<y-m>-0.433</y-m>
+			<z-m>0.99</z-m>
+			<pitch-deg>-5.3</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/ATR-72-500/Models/Instruments/VSI/VSI.xml</path>
+		<overlay>
+			<params>
+				<indicated-speed-fpm>instrumentation/vertical-speed-indicator[0]/indicated-speed-fpm</indicated-speed-fpm>
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>-1.633</x-m>
+			<y-m>-0.433</y-m>
+			<z-m>0.891</z-m>
+			<pitch-deg>-5.3</pitch-deg>
+		</offsets>
+	</model>
+
+	<!-- Shared -->
+	<model>
+		<path>Aircraft/ATR-72-500/Models/Instruments/MCP/mcp.xml</path>
+		<offsets>
+			<x-m>-1.405</x-m>
+			<y-m>0</y-m>
+			<z-m>1.243</z-m>
+			<pitch-deg>-4.3</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/ATR-72-500/Models/Instruments/AI/AI.xml</path>
+		<overlay>
+			<params>
+				<indicated-pitch-deg>instrumentation/attitude-indicator[0]/indicated-pitch-deg</indicated-pitch-deg>
+				<indicated-roll-deg>instrumentation/attitude-indicator[0]/indicated-roll-deg</indicated-roll-deg>
+<!--				<indicated-pitch-deg>instrumentation/attitude-indicator[2]/indicated-pitch-deg</indicated-pitch-deg>
+				<indicated-roll-deg>instrumentation/attitude-indicator[2]/indicated-roll-deg</indicated-roll-deg>-->
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>-1.642</x-m>
+			<y-m>-0.25</y-m>
+			<z-m>0.986</z-m>
+			<pitch-deg>-5.3</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/ATR-72-500/Models/Instruments/Stby-Altimeter/altimeter.xml</path>
+		<overlay>
+			<params>
+				<indicated-altitude-ft>instrumentation/altimeter[0]/indicated-altitude-ft</indicated-altitude-ft>
+				<setting-inhg>instrumentation/altimeter[0]/setting-inhg</setting-inhg>
+<!--				<indicated-altitude-ft>instrumentation/altimeter[2]/indicated-altitude-ft</indicated-altitude-ft>
+				<setting-inhg>instrumentation/altimeter[2]/setting-inhg</setting-inhg>-->
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>-1.638</x-m>
+			<y-m>-0.16</y-m>
+			<z-m>0.942</z-m>
+			<pitch-deg>-5.3</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/ATR-72-500/Models/Instruments/Stby-ASI/asi300.xml</path>
+		<overlay>
+			<params>
+				<indicated-speed-kt>instrumentation/airspeed-indicator[0]/indicated-speed-kt</indicated-speed-kt>
+<!--				<indicated-speed-kt>instrumentation/airspeed-indicator[2]/indicated-speed-kt</indicated-speed-kt>-->
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>-1.646</x-m>
+			<y-m>-0.16</y-m>
+			<z-m>1.027</z-m>
+			<pitch-deg>-5.3</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/ATR-72-500/Models/Instruments/Engines/Engines.xml</path>
+		<offsets>
+			<x-m>-1.633</x-m>
+			<y-m>-0.03</y-m>
+			<z-m>0.891</z-m>
+			<pitch-deg>-5.3</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/ATR-72-500/Models/Instruments/Flaps/Flaps.xml</path>
+		<offsets>
+			<x-m>-1.631</x-m>
+			<y-m>0.166</y-m>
+			<z-m>0.864</z-m>
+			<pitch-deg>-5.3</pitch-deg>
+		</offsets>
+	</model>
+
+	<!-- Copilot side -->
+	<model>
+		<path>Aircraft/ATR-72-500/Models/Instruments/EADI/EADI.xml</path>
+		<overlay>
+			<params>
+				<indicated-pitch-deg>instrumentation/attitude-indicator[0]/indicated-pitch-deg</indicated-pitch-deg>
+				<indicated-roll-deg>instrumentation/attitude-indicator[0]/indicated-roll-deg</indicated-roll-deg>
+				<indicated-slip-skid>instrumentation/slip-skid-ball[0]/indicated-slip-skid</indicated-slip-skid>
+<!--				<indicated-pitch-deg>instrumentation/attitude-indicator[1]/indicated-pitch-deg</indicated-pitch-deg>
+				<indicated-roll-deg>instrumentation/attitude-indicator[1]/indicated-roll-deg</indicated-roll-deg>
+				<indicated-slip-skid>instrumentation/slip-skid-ball[1]/indicated-slip-skid</indicated-slip-skid>-->
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>-1.645</x-m>
+			<y-m>0.56</y-m>
+			<z-m>1.002</z-m>
+			<pitch-deg>-5.3</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/ATR-72-500/Models/Instruments/EHSI/EHSI.xml</path>
+		<offsets>
+			<x-m>-1.631</x-m>
+			<y-m>0.56</y-m>
+			<z-m>0.852</z-m>
+			<pitch-deg>-5.3</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/ATR-72-500/Models/Instruments/ASI300/asi300.xml</path>
+		<overlay>
+			<params>
+				<airspeed-limit-kt>instrumentation/airspeed-indicator[0]/airspeed-limit-kt</airspeed-limit-kt>
+				<indicated-speed-kt>instrumentation/airspeed-indicator[0]/indicated-speed-kt</indicated-speed-kt>
+				<index n="0">instrumentation/airspeed-indicator[0]/index[0]</index>
+				<index n="1">instrumentation/airspeed-indicator[0]/index[1]</index>
+<!--				<airspeed-limit-kt>instrumentation/airspeed-indicator[1]/airspeed-limit-kt</airspeed-limit-kt>
+				<indicated-speed-kt>instrumentation/airspeed-indicator[1]/indicated-speed-kt</indicated-speed-kt>
+				<index n="0">instrumentation/airspeed-indicator[1]/index[0]</index>
+				<index n="1">instrumentation/airspeed-indicator[1]/index[1]</index>-->
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>-1.642</x-m>
+			<y-m>0.433</y-m>
+			<z-m>0.99</z-m>
+			<pitch-deg>-5.3</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/ATR-72-500/Models/Instruments/Clock/clock.xml</path>
+		<overlay>
+			<params>
+				<indicated-hour>instrumentation/clock[0]/local-hour</indicated-hour>
+				<indicated-min>instrumentation/clock[0]/indicated-min</indicated-min>
+				<indicated-sec>instrumentation/clock[0]/indicated-sec</indicated-sec>
+<!--				<indicated-hour>instrumentation/clock[1]/local-hour</indicated-hour>
+				<indicated-min>instrumentation/clock[1]/indicated-min</indicated-min>
+				<indicated-sec>instrumentation/clock[1]/indicated-sec</indicated-sec>-->
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>-1.638</x-m>
+			<y-m>0.352</y-m>
+			<z-m>0.945</z-m>
+			<pitch-deg>-5.3</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/ATR-72-500/Models/Instruments/VOR/VOR.xml</path>
+		<overlay>
+			<params>
+				<indicated-heading-deg>orientation/heading-magnetic-deg</indicated-heading-deg>
+				<nav-display n="0">instrumentation/nav-compass[1]/nav-display[0]</nav-display>
+				<nav-display n="1">instrumentation/nav-compass[1]/nav-display[1]</nav-display>
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>-1.633</x-m>
+			<y-m>0.433</y-m>
+			<z-m>0.891</z-m>
+			<pitch-deg>-5.3</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/ATR-72-500/Models/Instruments/Altimeter/altimeter.xml</path>
+		<overlay>
+			<params>
+				<indicated-altitude-ft>instrumentation/altimeter[0]/indicated-altitude-ft</indicated-altitude-ft>
+				<setting-inhg>instrumentation/altimeter[0]/setting-inhg</setting-inhg>
+<!--				<indicated-altitude-ft>instrumentation/altimeter[1]/indicated-altitude-ft</indicated-altitude-ft>
+				<setting-inhg>instrumentation/altimeter[1]/setting-inhg</setting-inhg>-->
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>-1.642</x-m>
+			<y-m>0.687</y-m>
+			<z-m>0.99</z-m>
+			<pitch-deg>-5.3</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/ATR-72-500/Models/Instruments/VSI/VSI.xml</path>
+		<overlay>
+			<params>
+				<indicated-speed-fpm>instrumentation/vertical-speed-indicator[0]/indicated-speed-fpm</indicated-speed-fpm>
+<!--				<indicated-speed-fpm>instrumentation/vertical-speed-indicator[1]/indicated-speed-fpm</indicated-speed-fpm>-->
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>-1.633</x-m>
+			<y-m>0.687</y-m>
+			<z-m>0.891</z-m>
+			<pitch-deg>-5.3</pitch-deg>
+		</offsets>
+	</model>
+
+	<!-- Pedestal -->
+	<model>
+		<path>Aircraft/Instruments-3d/VIR-32/ctl32-nav1.xml</path>
+		<offsets>
+			<x-m>-1.018</x-m>
+			<y-m>-0.17</y-m>
+			<z-m>0.358</z-m>
+			<pitch-deg>-90</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Instruments-3d/VHF-22/ctl22-com1.xml</path>
+		<offsets>
+			<x-m>-1.018</x-m>
+			<y-m>-0.1</y-m>
+			<z-m>0.358</z-m>
+			<pitch-deg>-90</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Instruments-3d/ADF-462/ctl62-adf.xml</path>
+		<offsets>
+			<x-m>-1.018</x-m>
+			<y-m>0</y-m>
+			<z-m>0.358</z-m>
+			<pitch-deg>-90</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Instruments-3d/VHF-22/ctl22-com2.xml</path>
+		<offsets>
+			<x-m>-1.018</x-m>
+			<y-m>0.1</y-m>
+			<z-m>0.358</z-m>
+			<pitch-deg>-90</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Instruments-3d/VIR-32/ctl32-nav2.xml</path>
+		<offsets>
+			<x-m>-1.018</x-m>
+			<y-m>0.17</y-m>
+			<z-m>0.358</z-m>
+			<pitch-deg>-90</pitch-deg>
+		</offsets>
+	</model>
+
+	<text>
+		<name>Registration text</name>
+		<offsets>
+			<x-m>-1.646</x-m>
+			<y-m>-0.434</y-m>
+			<z-m>1.035</z-m>
+			<pitch-deg>-5.3</pitch-deg>
+		</offsets>
+		<alignment>left-bottom</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">%s</format>
+		<property>sim/model/livery/registration</property>
+		<font>helvetica_bold.txf</font>
+		<character-size>0.03</character-size>
+		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<animation>
+		<type>material</type>
+		<object-name>Registration text</object-name>
+		<ambient>
+			<red>0.7</red>
+			<green>0.7</green>
+			<blue>0.7</blue>
+		</ambient>
+	</animation>
+
+	<!-- ANIMATIONS -->
+	<!-- Lighting -->
+	<animation>
+		<name>Lighting</name>
+		<type>material</type>
+		<condition>
+			<greater-than>
+				<property>systems/electrical/outputs/cockpit-lights</property>
+				<value>15</value>
+			</greater-than>
+		</condition>
+		<emission>
+			<red>0.5</red>
+			<green>0.5</green>
+			<blue>0.5</blue>
+		</emission>
+	</animation>
+
+	<!-- Glareshield -->
+	<animation>
+		<name>Flight director switch pick</name>
+		<type>pick</type>
+		<object-name>FDSwitches</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>autopilot/settings/flight-director</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<name>Flight director switch rotate</name>
+		<type>rotate</type>
+		<object-name>FDSwitches</object-name>
+		<property>autopilot/settings/flight-director</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>35</dep></entry>
+			<entry><ind>1</ind><dep>-35</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-1.403</x-m>
+			<y-m>0</y-m>
+			<z-m>1.207</z-m>
+		</center>
+	</animation>
+
+	<!-- Yokes -->
+	<animation>
+		<name>Elevator yoke movement</name>
+		<type>rotate</type>
+		<object-name>LeftYoke</object-name>
+		<object-name>RightYoke</object-name>
+		<object-name>YokeBases</object-name>
+		<property>controls/flight/elevator</property>
+		<factor>20</factor>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-1.304</x-m>
+			<y-m>0</y-m>
+			<z-m>0.072</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>Aileron left yoke movement</name>
+		<type>rotate</type>
+		<object-name>LeftYoke</object-name>
+		<property>controls/flight/aileron</property>
+		<factor>90</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.565</y-m>
+			<z-m>0.895</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>Aileron right yoke movement</name>
+		<type>rotate</type>
+		<object-name>RightYoke</object-name>
+		<property>controls/flight/aileron</property>
+		<factor>90</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0.565</y-m>
+			<z-m>0.895</z-m>
+		</center>
+	</animation>
+
+	<!-- Rudder pedals -->
+	<animation>
+		<name>Left rudder pedals</name>
+		<type>translate</type>
+		<object-name>LeftPedals</object-name>
+		<property>controls/flight/rudder</property>
+		<interpolation>
+			<entry><ind>-1</ind><dep>-0.07</dep></entry>
+			<entry><ind>1</ind><dep>0.28</dep></entry>
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<name>Right rudder pedals</name>
+		<type>translate</type>
+		<object-name>RightPedals</object-name>
+		<property>controls/flight/rudder</property>
+		<interpolation>
+			<entry><ind>1</ind><dep>-0.07</dep></entry>
+			<entry><ind>-1</ind><dep>0.28</dep></entry>
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<!-- Armrests -->
+	<animation>
+		<name>Pilot armrest pick</name>
+		<type>pick</type>
+		<object-name>LeftArmrests</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>
+				 ATR_72.doors.toggle("pilot-armrests");
+				</script>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<name>Pilot armrest rotate</name>
+		<type>rotate</type>
+		<object-name>LeftArmrests</object-name>
+		<property>sim/model/door-positions/pilot-armrests/position-norm</property>
+		<factor>95</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-0.4</x-m>
+			<y-m>0</y-m>
+			<z-m>0.75</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>Copilot armrest pick</name>
+		<type>pick</type>
+		<object-name>RightArmrests</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>
+				 ATR_72.doors.toggle("copilot-armrests");
+				</script>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<name>Copilot armrest rotate</name>
+		<type>rotate</type>
+		<object-name>RightArmrests</object-name>
+		<property>sim/model/door-positions/copilot-armrests/position-norm</property>
+		<factor>95</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-0.4</x-m>
+			<y-m>0</y-m>
+			<z-m>0.75</z-m>
+		</center>
+	</animation>
+
+	<!-- Door -->
+	<animation>
+		<name>Cockpit door pick</name>
+		<type>pick</type>
+		<object-name>Door</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>
+				 ATR_72.doors.toggle("cockpit");
+				</script>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<name>Cockpit door rotate</name>
+		<type>rotate</type>
+		<object-name>Door</object-name>
+		<property>sim/model/door-positions/cockpit/position-norm</property>
+		<factor>90</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>-1</z>
+		</axis>
+		<center>
+			<x-m>-0.165</x-m>
+			<y-m>-0.233</y-m>
+			<z-m>0</z-m>
+		</center>
+	</animation>
+
+	<!-- Gear indicator lights -->
+	<animation>
+		<name>Gear lights on/off</name>
+		<type>select</type>
+		<object-name>GearLUnlk</object-name>
+		<object-name>GearLDown</object-name>
+		<object-name>GearNUnlk</object-name>
+		<object-name>GearNDown</object-name>
+		<object-name>GearRUnlk</object-name>
+		<object-name>GearRDown</object-name>
+		<condition>
+			<greater-than>
+				<property>systems/electrical/outputs/efis</property>
+				<value>15</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<name>Nose gear unlocked</name>
+		<type>select</type>
+		<object-name>GearNUnlk</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>gear/gear[0]/position-norm</property>
+					<value>0</value>
+				</greater-than>
+				<less-than>
+					<property>gear/gear[0]/position-norm</property>
+					<value>1</value>
+				</less-than>
+			</and>
+		</condition>
+	</animation>
+	<animation>
+		<name>Nose gear down</name>
+		<type>select</type>
+		<object-name>GearNDown</object-name>
+		<condition>
+			<equals>
+				<property>gear/gear[0]/position-norm</property>
+				<value>1</value>
+			</equals>
+		</condition>
+	</animation>
+
+	<animation>
+		<name>Left gear unlocked</name>
+		<type>select</type>
+		<object-name>GearLUnlk</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>gear/gear[1]/position-norm</property>
+					<value>0</value>
+				</greater-than>
+				<less-than>
+					<property>gear/gear[1]/position-norm</property>
+					<value>1</value>
+				</less-than>
+			</and>
+		</condition>
+	</animation>
+	<animation>
+		<name>Left gear down</name>
+		<type>select</type>
+		<object-name>GearLDown</object-name>
+		<condition>
+			<equals>
+				<property>gear/gear[1]/position-norm</property>
+				<value>1</value>
+			</equals>
+		</condition>
+	</animation>
+
+	<animation>
+		<name>Right gear unlocked</name>
+		<type>select</type>
+		<object-name>GearRUnlk</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>gear/gear[2]/position-norm</property>
+					<value>0</value>
+				</greater-than>
+				<less-than>
+					<property>gear/gear[2]/position-norm</property>
+					<value>1</value>
+				</less-than>
+			</and>
+		</condition>
+	</animation>
+	<animation>
+		<name>Right gear down</name>
+		<type>select</type>
+		<object-name>GearRDown</object-name>
+		<condition>
+			<equals>
+				<property>gear/gear[2]/position-norm</property>
+				<value>1</value>
+			</equals>
+		</condition>
+	</animation>
+
+	<!-- Gear lever -->
+	<animation>
+		<name>Gear lever pick</name>
+		<type>pick</type>
+		<object-name>GearLever</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/gear/gear-down</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<name>Gear lever rotate</name>
+		<type>rotate</type>
+		<object-name>GearLever</object-name>
+		<property>controls/gear/gear-down</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>-17</dep></entry>
+			<entry><ind>1</ind><dep>11</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-1.7</x-m>
+			<y-m>0</y-m>
+			<z-m>0.95</z-m>
+		</center>
+	</animation>
+
+	<!-- Throttle quadrant -->
+	<animation>
+		<name>Parking brake pick</name>
+		<type>pick</type>
+		<object-name>BrakeLever</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/gear/brake-parking</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<name>Parking brake rotate</name>
+		<type>rotate</type>
+		<object-name>BrakeLever</object-name>
+		<property>controls/gear/brake-parking</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>34</dep></entry>
+			<entry><ind>1</ind><dep>0</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-1.233</x-m>
+			<y-m>0</y-m>
+			<z-m>0.329</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<name>Engine 1 thrust lever pick</name>
+		<type>pick</type>
+		<object-name>Eng1Thrust</object-name>
+		<action>
+			<button>0</button>
+			<button>3</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/engines/engine[0]/throttle</property>
+				<step type="double">0.01</step>
+				<max>1</max>
+			</binding>
+		</action>
+		<action>
+			<button>1</button>
+			<button>4</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/engines/engine[0]/throttle</property>
+				<step type="double">-0.01</step>
+				<min>0</min>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<name>Engine 1 thrust lever select</name>
+		<type>select</type>
+		<object-name>Eng1Thrust</object-name>
+		<condition>
+			<not>
+				<property>controls/engines/engine[0]/reverser</property>
+			</not>
+		</condition>
+	</animation>
+	<animation>
+		<name>Engine 1 thrust lever rotate</name>
+		<type>rotate</type>
+		<object-name>Eng1Thrust</object-name>
+		<property>controls/engines/engine[0]/throttle</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>46</dep></entry>
+			<entry><ind>0.3</ind><dep>33.5</dep></entry>
+			<entry><ind>1</ind><dep>-16</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-1.233</x-m>
+			<y-m>0</y-m>
+			<z-m>0.329</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>Engine 1 reverse lever select</name>
+		<type>select</type>
+		<object-name>Eng1Reverse</object-name>
+		<condition>
+			<property>controls/engines/engine[0]/reverser</property>
+		</condition>
+	</animation>
+	<animation>
+		<name>Engine 1 reverse lever rotate</name>
+		<type>rotate</type>
+		<object-name>Eng1Reverse</object-name>
+		<property>controls/engines/engine[0]/throttle</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>46</dep></entry>
+			<entry><ind>1</ind><dep>58</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-1.233</x-m>
+			<y-m>0</y-m>
+			<z-m>0.329</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>Engine 2 thrust lever pick</name>
+		<type>pick</type>
+		<object-name>Eng2Thrust</object-name>
+		<action>
+			<button>0</button>
+			<button>3</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/engines/engine[1]/throttle</property>
+				<step type="double">0.01</step>
+				<max>1</max>
+			</binding>
+		</action>
+		<action>
+			<button>1</button>
+			<button>4</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/engines/engine[1]/throttle</property>
+				<step type="double">-0.01</step>
+				<min>0</min>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<name>Engine 2 reverse lever select</name>
+		<type>select</type>
+		<object-name>Eng2Thrust</object-name>
+		<condition>
+			<not>
+				<property>controls/engines/engine[1]/reverser</property>
+			</not>
+		</condition>
+	</animation>
+	<animation>
+		<name>Engine 2 thrust lever rotate</name>
+		<type>rotate</type>
+		<object-name>Eng2Thrust</object-name>
+		<property>controls/engines/engine[1]/throttle</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>46</dep></entry>
+			<entry><ind>0.3</ind><dep>33.5</dep></entry>
+			<entry><ind>1</ind><dep>-16</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-1.233</x-m>
+			<y-m>0</y-m>
+			<z-m>0.329</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>Engine 2 reverse lever select</name>
+		<type>select</type>
+		<object-name>Eng2Reverse</object-name>
+		<condition>
+			<property>controls/engines/engine[1]/reverser</property>
+		</condition>
+	</animation>
+	<animation>
+		<name>Engine 2 reverse lever rotate</name>
+		<type>rotate</type>
+		<object-name>Eng2Reverse</object-name>
+		<property>controls/engines/engine[1]/throttle</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>46</dep></entry>
+			<entry><ind>1</ind><dep>58</dep></entry>
+		</interpolation>
+		<condition>
+			<property>controls/engines/engine[1]/reverser</property>
+		</condition>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-1.233</x-m>
+			<y-m>0</y-m>
+			<z-m>0.329</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<name>Engine 1 condition lever pick</name>
+		<type>pick</type>
+		<object-name>Eng1Cond</object-name>
+		<action>
+			<button>0</button>
+			<button>3</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/engines/engine[0]/condition</property>
+				<step type="double">0.01</step>
+				<max>1</max>
+			</binding>
+		</action>
+		<action>
+			<button>1</button>
+			<button>4</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/engines/engine[0]/condition</property>
+				<step type="double">-0.01</step>
+				<min>0</min>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<name>Engine 1 condition lever rotate</name>
+		<type>rotate</type>
+		<object-name>Eng1Cond</object-name>
+		<property>controls/engines/engine[0]/condition</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>57</dep></entry>
+			<entry><ind>0.4</ind><dep>43</dep></entry>
+			<entry><ind>1</ind><dep>-16</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-1.233</x-m>
+			<y-m>0</y-m>
+			<z-m>0.329</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>Engine 2 condition lever pick</name>
+		<type>pick</type>
+		<object-name>Eng2Cond</object-name>
+		<action>
+			<button>0</button>
+			<button>3</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/engines/engine[1]/condition</property>
+				<step type="double">0.01</step>
+				<max>1</max>
+			</binding>
+		</action>
+		<action>
+			<button>1</button>
+			<button>4</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/engines/engine[1]/condition</property>
+				<step type="double">-0.01</step>
+				<min>0</min>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<name>Engine 2 condition lever rotate</name>
+		<type>rotate</type>
+		<object-name>Eng2Cond</object-name>
+		<property>controls/engines/engine[1]/condition</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>57</dep></entry>
+			<entry><ind>0.4</ind><dep>43</dep></entry>
+			<entry><ind>1</ind><dep>-16</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-1.233</x-m>
+			<y-m>0</y-m>
+			<z-m>0.329</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<name>Flap lever pick</name>
+		<type>pick</type>
+		<object-name>FlapLever</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>
+				 controls.flapsDown(1);
+				</script>
+			</binding>
+		</action>
+		<action>
+			<button>1</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>
+				 controls.flapsDown(-1);
+				</script>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<name>Flap lever rotate</name>
+		<type>rotate</type>
+		<object-name>FlapLever</object-name>
+		<property>controls/flight/flaps</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>0.357</ind><dep>14.5</dep></entry>
+			<entry><ind>0.714</ind><dep>36</dep></entry>
+			<entry><ind>1</ind><dep>36</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-1.233</x-m>
+			<y-m>0</y-m>
+			<z-m>0.329</z-m>
+		</center>
+	</animation>
+
+	<!-- Shaders and effects -->
+	<effect>
+		<inherits-from>Effects/lightmap</inherits-from>
+		<parameters>
+			<texture n="1">
+				<image>Aircraft/ATR-72-500/Models/Effects/mainpanel-lightmap.png</image>
+			</texture>
+			<condition>
+				<use>systems/electrical/outputs/panel-lights</use>
+			</condition>
+		</parameters>
+		<object-name>MainPanel</object-name>
+	</effect>
+
+</PropertyList>

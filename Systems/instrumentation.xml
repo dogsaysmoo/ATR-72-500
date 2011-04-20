@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- ATR 72 instrumentation file -->
+
+<PropertyList>
+
+	<adf>
+		<name>adf</name>
+		<number>0</number>
+	</adf>
+	<adf>
+		<name>adf</name>
+		<number>1</number>
+	</adf>
+
+	<!-- Pilot -->
+	<altimeter>
+		<name>altimeter</name>
+		<number>0</number>
+		<static-pressure>/systems/static/pressure-inhg</static-pressure>
+		<quantum type="double">0</quantum>
+		<tau type="double">0</tau>
+	</altimeter>
+	<!-- Copilot -->
+	<altimeter>
+		<name>altimeter</name>
+		<number>1</number>
+		<static-pressure>/systems/static/pressure-inhg</static-pressure>
+		<quantum type="double">0</quantum>
+		<tau type="double">0</tau>
+	</altimeter>
+	<!-- Standby -->
+	<altimeter>
+		<name>altimeter</name>
+		<number>2</number>
+		<static-pressure>/systems/static/pressure-inhg</static-pressure>
+		<quantum type="double">0</quantum>
+		<tau type="double">0</tau>
+	</altimeter>
+
+	<!-- Pilot -->
+	<airspeed-indicator>
+		<name>airspeed-indicator</name>
+		<number>0</number>
+		<total-pressure>/systems/pitot/total-pressure-inhg</total-pressure>
+		<static-pressure>/systems/static/pressure-inhg</static-pressure>
+	</airspeed-indicator>
+	<!-- Copilot -->
+	<airspeed-indicator>
+		<name>airspeed-indicator</name>
+		<number>1</number>
+		<total-pressure>/systems/pitot/total-pressure-inhg</total-pressure>
+		<static-pressure>/systems/static/pressure-inhg</static-pressure>
+	</airspeed-indicator>
+	<!-- Standby -->
+	<airspeed-indicator>
+		<name>airspeed-indicator</name>
+		<number>2</number>
+		<total-pressure>/systems/pitot/total-pressure-inhg</total-pressure>
+		<static-pressure>/systems/static/pressure-inhg</static-pressure>
+	</airspeed-indicator>
+
+	<!-- Pilot -->
+	<attitude-indicator>
+		<name>attitude-indicator</name>
+		<number>0</number>
+		<suction>/systems/vacuum[0]/suction-inhg</suction>
+		<suction>/systems/vacuum[1]/suction-inhg</suction>
+	</attitude-indicator>
+	<!-- Copilot -->
+	<attitude-indicator>
+		<name>attitude-indicator</name>
+		<number>1</number>
+		<suction>/systems/vacuum[0]/suction-inhg</suction>
+		<suction>/systems/vacuum[1]/suction-inhg</suction>
+	</attitude-indicator>
+	<!-- Standby -->
+	<attitude-indicator>
+		<name>attitude-indicator</name>
+		<number>2</number>
+		<suction>/systems/vacuum[0]/suction-inhg</suction>
+		<suction>/systems/vacuum[1]/suction-inhg</suction>
+	</attitude-indicator>
+
+	<!-- Pilot -->
+	<vertical-speed-indicator>
+		<name>vertical-speed-indicator</name>
+		<number>0</number>
+		<static-pressure>/systems/static/pressure-inhg</static-pressure>
+	</vertical-speed-indicator>
+	<!-- Copilot -->
+	<vertical-speed-indicator>
+		<name>vertical-speed-indicator</name>
+		<number>1</number>
+		<static-pressure>/systems/static/pressure-inhg</static-pressure>
+	</vertical-speed-indicator>
+
+	<!-- Pilot -->
+	<clock>
+		<name>clock</name>
+		<number>0</number>
+	</clock>
+	<!-- Copilot -->
+	<clock>
+		<name>clock</name>
+		<number>1</number>
+	</clock>
+
+	<!-- Pilot -->
+	<slip-skid-ball>
+		<name>slip-skid-ball</name>
+		<number>0</number>
+	</slip-skid-ball>
+	<!-- Copilot -->
+	<slip-skid-ball>
+		<name>slip-skid-ball</name>
+		<number>1</number>
+	</slip-skid-ball>
+
+</PropertyList>

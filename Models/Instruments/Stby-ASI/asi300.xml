@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- ATR 72-500 for FlightGear -->
+<!-- Standby Airspeed Indicator -->
+
+<PropertyList>
+
+	<path>asi300.ac</path>
+
+	<!-- PARAMETERS -->
+	<params>
+		<indicated-speed-kt>instrumentation/airspeed-indicator[0]/indicated-speed-kt</indicated-speed-kt>
+	</params>
+
+	<!-- ANIMATIONS -->
+	<animation>
+		<name>Face lighting</name>
+		<type>material</type>
+		<object-name>Face</object-name>
+		<condition>
+			<greater-than>
+				<property>systems/electrical/outputs/panel-lights</property>
+				<value>15</value>
+			</greater-than>
+		</condition>
+		<emission>
+			<red>0.2</red>
+			<green>0.2</green>
+			<blue>0.2</blue>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Needle</object-name>
+		<property alias="../../params/indicated-speed-kt" />
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>100</ind><dep>-97</dep></entry>
+			<entry><ind>150</ind><dep>-157</dep></entry>
+			<entry><ind>200</ind><dep>-216</dep></entry>
+			<entry><ind>250</ind><dep>-277</dep></entry>
+			<entry><ind>300</ind><dep>-336.5</dep></entry>
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+	</animation>
+
+</PropertyList>
