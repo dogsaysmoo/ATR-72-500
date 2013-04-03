@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<path>interior.pax.ac</path>
+
+	<animation>
+		<name>Overhead bins pick</name>
+		<type>pick</type>
+		<object-name>OHBinLeftDoors</object-name>
+		<object-name>OHBinRightDoors</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>
+				 ATR_72.doors.toggle("overhead-bins");
+				</script>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<name>Right overhead bins rotate</name>
+		<type>rotate</type>
+		<object-name>OHBinLeftDoors</object-name>
+		<property>sim/model/door-positions/overhead-bins/position-norm</property>
+		<factor>60</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.307</y-m>
+			<z-m>-0.556</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>Right overhead bins rotate</name>
+		<type>rotate</type>
+		<object-name>OHBinRightDoors</object-name>
+		<property>sim/model/door-positions/overhead-bins/position-norm</property>
+		<factor>60</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0.307</y-m>
+			<z-m>-0.556</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<name>Conventional lighting</name>
+		<type>material</type>
+		<object-name>Carpet</object-name>
+		<object-name>OHBins</object-name>
+		<object-name>OHBinLeftDoors</object-name>
+		<object-name>OHBinRightDoors</object-name>
+		<object-name>SeatFabric</object-name>
+		<object-name>SeatSupports</object-name>
+		<object-name>SeatTrays</object-name>
+		<object-name>Walls</object-name>
+		<condition>
+			<greater-than>
+				<property>systems/electrical/outputs/cabin-lights</property>
+				<value>15</value>
+			</greater-than>
+		</condition>
+		<emission>
+			<red>0.5</red>
+			<green>0.5</green>
+			<blue>0.5</blue>
+		</emission>
+	</animation>
+
+	<effect>
+		<inherits-from>Effects/lightmap</inherits-from>
+		<parameters>
+			<texture n="1">
+				<image>Aircraft/ATR-72-500/Models/Effects/wall-pax-lightmap.png</image>
+			</texture>
+			<condition>
+				<use>systems/electrical/outputs/cabin-lights</use>
+			</condition>
+		</parameters>
+		<object-name>Bulkhead</object-name>
+	</effect>
+
+</PropertyList>

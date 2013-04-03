@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<name>Startup</name>
+	<description>Learn how to start the engines manually.</description>
+	<presets>
+		<on-ground type="bool">true</on-ground>
+	</presets>
+
+	<init>
+		<set>
+			<property>controls/gear/brake-parking</property>
+			<value type="bool">true</value>
+		</set>
+		<set>
+			<property>controls/engines/engine[0]/throttle</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>controls/engines/engine[1]/throttle</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>controls/engines/engine[0]/condition</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>controls/engines/engine[1]/condition</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>engines/engine[0]/running</property>
+			<value type="bool">false</value>
+		</set>
+		<set>
+			<property>engines/engine[1]/running</property>
+			<value type="bool">false</value>
+		</set>
+	</init>
+
+	<step>
+		<message>Welcome aboard the ATR 72-500!</message>
+	</step>
+
+	<step>
+		<message>In this tutorial, we will learn how to start the engines and prepare for takeoff.
+First, ensure all doors are closed (click them to open/close) and all passengers and
+cargo have been loaded.</message>
+	</step>
+
+	<step>
+		<message>The electrical system is currently dormant. Reach up to the overhead panel and turn
+on external power. This will give us electrical power on the ground, but will be useless
+once we start moving!</message>
+		<view>
+			<heading-offset-deg>315.5</heading-offset-deg>
+			<pitch-offset-deg>23.6</pitch-offset-deg>
+			<roll-offset-deg>0.0</roll-offset-deg>
+			<x-offset-m>-0.6</x-offset-m>
+			<y-offset-m>-1.1</y-offset-m>
+			<z-offset-m>-11.0</z-offset-m>
+			<field-of-view>33.5</field-of-view>
+		</view>
+		<marker>
+			<x-m>-11.5000</x-m>
+			<y-m>-0.1108</y-m>
+			<z-m>-0.8450</z-m>
+			 <scale>3.0000</scale>
+		</marker>
+		<exit>
+			<condition>
+				<property>controls/electric/external-power</property>
+			</condition>
+		</exit>
+	</step>
+
+	<step>
+		<message>Now let's start the engines. First, move the condition levers to maximum RPM. Press and
+hold Alt-Shift-].</message>
+		<view>
+			<heading-offset-deg>315.5</heading-offset-deg>
+			<pitch-offset-deg>-47.8</pitch-offset-deg>
+			<roll-offset-deg>0.0</roll-offset-deg>
+			<x-offset-m>-0.6</x-offset-m>
+			<y-offset-m>-1.1</y-offset-m>
+			<z-offset-m>-11.0</z-offset-m>
+			<field-of-view>28.5</field-of-view>
+		</view>
+		<exit>
+			<condition>
+				<and>
+					<equals>
+						<property>controls/engines/engine[0]/condition</property>
+						<value>1</value>
+					</equals>
+					<equals>
+						<property>controls/engines/engine[1]/condition</property>
+						<value>1</value>
+					</equals>
+				</and>
+			</condition>
+		</exit>
+	</step>
+
+	<step>
+		<message>Now set the engine start switch to START A&amp;B. Click it several times.</message>
+		<view>
+			<heading-offset-deg>322.2</heading-offset-deg>
+			<pitch-offset-deg>19.7</pitch-offset-deg>
+			<roll-offset-deg>0.0</roll-offset-deg>
+			<x-offset-m>-0.6</x-offset-m>
+			<y-offset-m>-1.1</y-offset-m>
+			<z-offset-m>-11.0</z-offset-m>
+			<field-of-view>33.5</field-of-view>
+		</view>
+		<marker>
+			<x-m>-11.6050</x-m>
+			<y-m>-0.1308</y-m>
+			<z-m>-0.8775</z-m>
+			<scale>3.7333</scale>
+		</marker>
+		<exit>
+			<condition>
+				<equals>
+					<property>controls/engines/start-switch</property>
+					<value>4</value>
+				</equals>
+			</condition>
+		</exit>
+	</step>
+
+	<step>
+		<message>Ignite the engines by activating both start buttons, or just press and hold s.</message>
+		<view>
+			<heading-offset-deg>322.2</heading-offset-deg>
+			<pitch-offset-deg>19.7</pitch-offset-deg>
+			<roll-offset-deg>0.0</roll-offset-deg>
+			<x-offset-m>-0.6</x-offset-m>
+			<y-offset-m>-1.1</y-offset-m>
+			<z-offset-m>-11.0</z-offset-m>
+			<field-of-view>33.5</field-of-view>
+		</view>
+		<exit>
+			<condition>
+				<and>
+					<property>engines/engine[0]/running</property>
+					<property>engines/engine[1]/running</property>
+				</and>
+			</condition>
+		</exit>
+	</step>
+
+	<step>
+		<message>The engines are now running. Set the engine start switch back to OFF. Middle-click
+it several times.</message>
+		<view>
+			<heading-offset-deg>322.2</heading-offset-deg>
+			<pitch-offset-deg>19.7</pitch-offset-deg>
+			<roll-offset-deg>0.0</roll-offset-deg>
+			<x-offset-m>-0.6</x-offset-m>
+			<y-offset-m>-1.1</y-offset-m>
+			<z-offset-m>-11.0</z-offset-m>
+			<field-of-view>33.5</field-of-view>
+		</view>
+		<marker>
+			<x-m>-11.6050</x-m>
+			<y-m>-0.1308</y-m>
+			<z-m>-0.8775</z-m>
+			<scale>3.7333</scale>
+		</marker>
+		<exit>
+			<condition>
+				<equals>
+					<property>controls/engines/start-switch</property>
+					<value>0</value>
+				</equals>
+			</condition>
+		</exit>
+	</step>
+
+	<step>
+		<message>To generate electrical power from the engines, we need to turn on the electric
+generators. First, turn on the generator for engine 1.</message>
+		<view>
+			<heading-offset-deg>320.0</heading-offset-deg>
+			<pitch-offset-deg>25.4</pitch-offset-deg>
+			<roll-offset-deg>0.0</roll-offset-deg>
+			<x-offset-m>-0.6</x-offset-m>
+			<y-offset-m>-1.1</y-offset-m>
+			<z-offset-m>-11.0</z-offset-m>
+			<field-of-view>33.5</field-of-view>
+		</view>
+		<marker>
+			<x-m>-11.5008</x-m>
+			<y-m>-0.2425</y-m>
+			<z-m>-0.8408</z-m>
+			<scale>3.2500</scale>
+		</marker>
+		<exit>
+			<condition>
+				<property>controls/electric/engine[0]/generator</property>
+			</condition>
+		</exit>
+	</step>
+
+	<step>
+		<message>Now turn on the generator for engine 2 (DC GEN 2).</message>
+		<view>
+			<heading-offset-deg>320.0</heading-offset-deg>
+			<pitch-offset-deg>25.4</pitch-offset-deg>
+			<roll-offset-deg>0.0</roll-offset-deg>
+			<x-offset-m>-0.6</x-offset-m>
+			<y-offset-m>-1.1</y-offset-m>
+			<z-offset-m>-11.0</z-offset-m>
+			<field-of-view>33.5</field-of-view>
+		</view>
+		<exit>
+			<condition>
+				<property>controls/electric/engine[1]/generator</property>
+			</condition>
+		</exit>
+	</step>
+
+	<step>
+		<message>We no longer need external power from the ground, so turn off the external power
+switch.</message>
+		<view>
+			<heading-offset-deg>320.0</heading-offset-deg>
+			<pitch-offset-deg>25.4</pitch-offset-deg>
+			<roll-offset-deg>0.0</roll-offset-deg>
+			<x-offset-m>-0.6</x-offset-m>
+			<y-offset-m>-1.1</y-offset-m>
+			<z-offset-m>-11.0</z-offset-m>
+			<field-of-view>33.5</field-of-view>
+		</view>
+		<exit>
+			<condition>
+				<not>
+					<property>controls/electric/external-power</property>
+				</not>
+			</condition>
+		</exit>
+	</step>
+
+	<step>
+		<message>Now turn on the fasten seatbelt sign- just a standard precaution. ;)</message>
+		<view>
+			<heading-offset-deg>317.7</heading-offset-deg>
+			<pitch-offset-deg>12.2</pitch-offset-deg>
+			<roll-offset-deg>0.0</roll-offset-deg>
+			<x-offset-m>-0.6</x-offset-m>
+			<y-offset-m>-1.1</y-offset-m>
+			<z-offset-m>-11.0</z-offset-m>
+			<field-of-view>18.3</field-of-view>
+		</view>
+		<marker>
+			<x-m>-11.7692</x-m>
+			<y-m>0.0858</y-m>
+			<z-m>-0.9467</z-m>
+			<scale>3.0833</scale>
+		</marker>
+		<exit>
+			<condition>
+				<property>controls/switches/seatbelt-sign</property>
+			</condition>
+		</exit>
+	</step>
+
+	<end>
+		<message>Congratulations! You have successfully started the ATR 72.</message>
+	</end>
+
+</PropertyList>

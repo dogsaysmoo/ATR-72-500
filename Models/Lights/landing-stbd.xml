@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<path>landing.ac</path>
+
+	<animation>
+		<name>On/off</name>
+		<type>select</type>
+		<object-name>Light</object-name>
+		<object-name>Cone</object-name>
+		<condition>
+			<greater-than>
+				<property>systems/electrical/outputs/landing-lights[1]</property>
+				<value>5</value>
+			</greater-than>
+		</condition>
+	</animation>
+	<animation>
+		<name>Cone on/off</name>
+		<type>select</type>
+		<object-name>Cone</object-name>
+		<condition>
+			<property>controls/lighting/cones</property>
+		</condition>
+	</animation>
+
+	<effect>
+		<inherits-from>Effects/light-cone</inherits-from>
+		<object-name>Cone</object-name>
+		<object-name>Cone-texture</object-name>
+	</effect>
+
+</PropertyList>

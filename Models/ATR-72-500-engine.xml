@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<path>ATR-72-500-engine.ac</path>
+
+	<params>
+		<lightmap-texture-path>Aircraft/ATR-72-500/Models/Effects/engine-left-lightmap.png</lightmap-texture-path>
+		<n1>engines/engine[0]/n1</n1>
+		<on-fire>engines/engine[0]/on-fire</on-fire>
+	</params>
+
+	<model>
+		<name>Engine fire</name>
+		<path>Aircraft/ATR-72-500/Models/Effects/enginefire.xml</path>
+		<offsets>
+			<x-m>2</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</offsets>
+		<condition>
+			<property alias="../../../params/on-fire" />
+		</condition>
+	</model>
+
+	<animation>
+		<name>4-blade prop</name>
+		<type>select</type>
+		<object-name>PropBlades4</object-name>
+		<object-name>PropBlur4</object-name>
+		<condition>
+			<equals>
+				<property>sim/model/livery/number-of-blades</property>
+				<value>4</value>
+			</equals>
+		</condition>
+	</animation>
+	<animation>
+		<name>6-blade prop</name>
+		<type>select</type>
+		<object-name>PropBlades6</object-name>
+		<object-name>PropBlur6</object-name>
+		<condition>
+			<equals>
+				<property>sim/model/livery/number-of-blades</property>
+				<value>6</value>
+			</equals>
+		</condition>
+	</animation>
+
+	<animation>
+		<name>Slow fan</name>
+		<type>select</type>
+		<object-name>PropBlades4</object-name>
+		<object-name>PropBlades6</object-name>
+		<condition>
+			<less-than>
+				<property alias="../../../../params/n1" />
+				<value>50</value>
+			</less-than>
+		</condition>
+	</animation>
+	<animation>
+		<name>Fast fan</name>
+		<type>select</type>
+		<object-name>PropBlur4</object-name>
+		<object-name>PropBlur6</object-name>
+		<condition>
+			<greater-than-equals>
+				<property alias="../../../../params/n1" />
+				<value>50</value>
+			</greater-than-equals>
+		</condition>
+	</animation>
+	<animation>
+		<name>Fan</name>
+		<type>spin</type>
+		<object-name>PropBlades4</object-name>
+		<object-name>PropBlades6</object-name>
+		<object-name>PropBlur4</object-name>
+		<object-name>PropBlur6</object-name>
+		<object-name>PropCone</object-name>
+		<property alias="../../params/n1" />
+		<factor>13</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>Nacelle</object-name>
+		<property-base>sim/model/livery</property-base>
+		<texture-prop>texture</texture-prop>
+		<texture>EXK.png</texture>
+	</animation>
+
+	<effect>
+		<name>Wing lightmap</name>
+		<inherits-from>Effects/lightmap</inherits-from>
+		<parameters>
+			<texture n="1">
+				<image alias="../../../../params/lightmap-texture-path" />
+			</texture>
+			<condition>
+				<use>systems/electrical/outputs/wing-lights</use>
+			</condition>
+		</parameters>
+		<object-name>Nacelle</object-name>
+	</effect>
+
+</PropertyList>

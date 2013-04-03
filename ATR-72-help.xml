@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<title>ATR 72-500</title>
+
+	<key>
+		<name>Delete</name>
+		<desc>Toggle thrust reversal</desc>
+	</key>
+	<key>
+		<name>}</name>
+		<desc>Increase engine start switch setting</desc>
+	</key>
+	<key>
+		<name>{</name>
+		<desc>Decrease engine start switch setting</desc>
+	</key>
+	<key>
+		<name>Alt-}</name>
+		<desc>Increase engine condition</desc>
+	</key>
+	<key>
+		<name>Alt-{</name>
+		<desc>Decrease engine condition</desc>
+	</key>
+	<key>
+		<name>W</name>
+		<desc>Open tiller steering dialog</desc>
+	</key>
+	<key>
+		<name>Q</name>
+		<desc>Full tiller left</desc>
+	</key>
+	<key>
+		<name>q</name>
+		<desc>Steer tiller left</desc>
+	</key>
+	<key>
+		<name>w</name>
+		<desc>Center tiller</desc>
+	</key>
+	<key>
+		<name>e</name>
+		<desc>Steer tiller right</desc>
+	</key>
+	<key>
+		<name>E</name>
+		<desc>Full tiller right</desc>
+	</key>
+	<key>
+		<name>Ctrl-Z</name>
+		<desc>Autopilot on/off</desc>
+	</key>
+	<key>
+		<name>Ctrl-F</name>
+		<desc>Flight director on/off</desc>
+	</key>
+	<key>
+		<name>Ctrl-Y</name>
+		<desc>Yaw damper on/off</desc>
+	</key>
+	<key>
+		<name>r</name>
+		<desc>Walk forward toward view</desc>
+	</key>
+	<key>
+		<name>R</name>
+		<desc>Run forward toward view</desc>
+	</key>
+	<key>
+		<name>f</name>
+		<desc>Walk backward from view</desc>
+	</key>
+	<line>For general aircraft help and information, see ATR-72-500/Docs/README.pdf</line>
+	<line>Need help with the autopilot? See ATR-72-500/Docs/README.autopilot.pdf</line>
+
+</PropertyList>

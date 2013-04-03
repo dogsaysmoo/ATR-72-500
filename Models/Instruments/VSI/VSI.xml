@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- ATR 72 vertical speed indicator -->
+<!-- By Skyop, adapted from the Citation II by Syd Adams -->
+
+<PropertyList>
+
+	 <path>vsi.ac</path>
+
+	<!-- PARAMETERS -->
+	<params>
+		<indicated-speed-fpm>instrumentation/vertical-speed-indicator[0]/indicated-speed-fpm</indicated-speed-fpm>
+	</params>
+
+	<!-- ANIMATIONS -->
+	<animation>
+		<type>material</type>
+		<object-name>Face</object-name>
+		<object-name>Needle</object-name>
+		<emission>
+			<red>0.14</red>
+			<green>0.05</green>
+			<blue>0.03</blue>
+			<factor-prop>controls/lighting/instruments-norm</factor-prop>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Needle</object-name>
+		<property alias="../../params/indicated-speed-fpm" />
+		<interpolation>
+			<entry><ind>-6000</ind><dep>165</dep></entry>
+			<entry><ind>-4000</ind><dep>125</dep></entry>
+			<entry><ind>-2000</ind><dep>85</dep></entry>
+			<entry><ind>-1000</ind><dep>46</dep></entry>
+			<entry><ind>-500</ind><dep>23</dep></entry>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>500</ind><dep>-23</dep></entry>
+			<entry><ind>1000</ind><dep>-46</dep></entry>
+			<entry><ind>2000</ind><dep>-85</dep></entry>
+			<entry><ind>4000</ind><dep>-125</dep></entry>
+			<entry><ind>6000</ind><dep>-165</dep></entry>
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+</PropertyList>

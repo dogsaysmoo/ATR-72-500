@@ -1,0 +1,26 @@
+AC3Db
+MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
+MATERIAL "Lights" rgb 1 1 1 amb 1 1 1 emis 1 1 1 spec 0 0 0 shi 0 trans 0
+OBJECT world
+kids 1
+OBJECT poly
+name "Light"
+data 5
+Plane
+texture "lights.png"
+texrep 1 1
+crease 30.000000
+numvert 4
+1 1 0
+1 -1 0
+-1 -1 0
+-1 1 0
+numsurf 1
+SURF 0x00
+mat 1
+refs 4
+0 0.588892221451 0.0888921916485
+3 0.911107778549 0.0888921916485
+2 0.911107778549 0.411107808352
+1 0.588892221451 0.411107808352
+kids 0

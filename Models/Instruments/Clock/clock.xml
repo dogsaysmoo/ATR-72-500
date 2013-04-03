@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<path>clock.ac</path>
+
+	<!-- PARAMETERS -->
+	<params>
+		<indicated-hour>instrumentation/clock[0]/indicated-hour</indicated-hour>
+		<indicated-min>instrumentation/clock[0]/indicated-min</indicated-min>
+		<indicated-sec>instrumentation/clock[0]/indicated-sec</indicated-sec>
+	</params>
+
+	<!-- ANIMATIONS -->
+	<animation>
+		<type>material</type>
+		<object-name>Face</object-name>
+		<object-name>Hours</object-name>
+		<object-name>Minutes</object-name>
+		<object-name>Seconds</object-name>
+		<emission>
+			<red>0.14</red>
+			<green>0.05</green>
+			<blue>0.03</blue>
+			<factor-prop>controls/lighting/instruments-norm</factor-prop>
+		</emission>
+	</animation>
+
+	<animation>
+		<name>Hour hand</name>
+		<type>rotate</type>
+		<object-name>Hours</object-name>
+		<property alias="../../params/indicated-hour" />
+		<factor>30</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>Minute hand</name>
+		<type>rotate</type>
+		<object-name>Minutes</object-name>
+		<property alias="../../params/indicated-min" />
+		<factor>6</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>Second hand</name>
+		<type>rotate</type>
+		<object-name>Seconds</object-name>
+		<property alias="../../params/indicated-sec" />
+		<factor>6</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+	</animation>
+
+</PropertyList>
