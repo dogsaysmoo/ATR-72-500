@@ -108,24 +108,10 @@ setlistener("sim/model/start-idling", func(idle)
   }
  }, 0, 0);
 
-## Nose gear steering
-# The nose gear can be steered using the normal system (tiller) or the alternate system (rudder)
-# The real ATR 72 only steers using the "normal" system; the alternate system is implemented only for the sake of user-friendliness
 var update_steering = func
  {
- var enable_tiller = props.globals.getNode("controls/gear/enable-tiller").getBoolValue();
- # Normal system
- if (enable_tiller)
-  {
-  var tiller_steer = props.globals.getNode("controls/gear/tiller-steering-deg").getValue();
-  setprop("controls/gear/steering-deg", tiller_steer);
-  }
- # Alternate system
- else
-  {
   var rudder_steer = props.globals.getNode("controls/flight/rudder").getValue();
   setprop("controls/gear/steering-deg", rudder_steer * 60);
-  }
  };
 
 ## Aircraft-specific dialogs
@@ -133,6 +119,5 @@ var dialogs =
  {
  lights: gui.Dialog.new("sim/gui/lights/dialog", "Aircraft/ATR-72-500/Systems/lights-dlg.xml"),
  failures: gui.Dialog.new("sim/gui/failures/dialog", "Aircraft/ATR-72-500/Systems/failures-dlg.xml"),
- tiller: gui.Dialog.new("sim/gui/tiller/dialog", "Aircraft/ATR-72-500/Systems/tiller-dlg.xml"),
  autopilot: gui.Dialog.new("sim/gui/autopilot/dialog", "Aircraft/ATR-72-500/Systems/autopilot-dlg.xml")
  };
