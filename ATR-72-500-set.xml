@@ -176,16 +176,6 @@
 							</script>
 						</binding>
 					</item>
-					<item>
-						<name>failures</name>
-						<label>Tiller steering</label>
-						<binding>
-							<command>nasal</command>
-							<script>
-							 ATR_72.dialogs.tiller.open();
-							</script>
-						</binding>
-					</item>
 				</menu>
 			</default>
 		</menubar>
