@@ -177,7 +177,7 @@
 						</binding>
 					</item>
 					<item>
-						<name>failures</name>
+						<name>tiller</name>
 						<label>Tiller steering</label>
 						<binding>
 							<command>nasal</command>
@@ -255,7 +255,7 @@
 		</engines>
 		<gear>
 			<brake-parking type="bool">true</brake-parking>
-			<enable-tiller type="bool" archive="y">true</enable-tiller>
+			<enable-tiller type="bool" archive="y">false</enable-tiller>
 			<steering-deg type="double">0</steering-deg>
 			<tiller-steering-deg type="double">0</tiller-steering-deg>
 		</gear>
