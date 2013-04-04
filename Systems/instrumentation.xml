@@ -117,4 +117,35 @@
 		<number>1</number>
 	</slip-skid-ball>
 
+	<marker-beacon>
+  <name>marker-beacon</name>
+  <number>0</number>
+</marker-beacon>
+
+<heading-indicator>
+  <name>heading-indicator</name>
+  <number>0</number>
+  <suction>/systems/vacuum/suction-inhg</suction>
+</heading-indicator>
+
+<magnetic-compass>
+  <name>magnetic-compass</name>
+  <number>0</number>
+</magnetic-compass>
+
+<nav-radio>
+  <name>nav</name>
+  <number>0</number>
+</nav-radio>
+
+<nav-radio>
+  <name>nav</name>
+  <number>1</number>
+</nav-radio>
+
+<dme>
+  <name>dme</name>
+  <number>0</number>
+</dme>
+
 </PropertyList>

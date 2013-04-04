@@ -176,6 +176,16 @@
 							</script>
 						</binding>
 					</item>
+					<item>
+						<name>failures</name>
+						<label>Tiller steering</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							 ATR_72.dialogs.tiller.open();
+							</script>
+						</binding>
+					</item>
 				</menu>
 			</default>
 		</menubar>
@@ -334,7 +344,6 @@
 
 	<input>
 		<keyboard>
-			<!-- Engine controls -->
 			<key n="123">
 				<name>{</name>
 				<desc>Decrease start switch setting/decrease condition</desc>
@@ -342,15 +351,7 @@
 				<binding>
 					<command>nasal</command>
 					<script>
-					 var alt = props.globals.getNode("devices/status/keyboard/event/modifier/alt").getBoolValue();
-					 if (alt)
-					  {
-					  ATR_72.incCondition(-0.05);
-					  }
-					 else
-					  {
 					  ATR_72.incStarter(-1);
-					  }
 					</script>
 				</binding>
 			</key>
@@ -361,18 +362,33 @@
 				<binding>
 					<command>nasal</command>
 					<script>
-					 var alt = props.globals.getNode("devices/status/keyboard/event/modifier/alt").getBoolValue();
-					 if (alt)
-					  {
-					  ATR_72.incCondition(0.05);
-					  }
-					 else
-					  {
 					  ATR_72.incStarter(1);
-					  }
 					</script>
 				</binding>
 			</key>
+			<key n="109">
+				<name>m</name>
+				<desc>Increase condition</desc>
+				<repeatable type="bool">true</repeatable>
+				<binding>
+					<command>nasal</command>
+					<script>
+					  ATR_72.incCondition(0.05);
+					</script>
+				</binding>
+			</key>
+			<key n="77">
+				<name>M</name>
+				<desc>Decrease condition</desc>
+				<repeatable type="bool">true</repeatable>
+				<binding>
+					<command>nasal</command>
+					<script>
+					  ATR_72.incCondition(-0.05);
+					</script>
+				</binding>
+			</key>
+
 			<!-- Tiller steering -->
 			<key n="81">
 				<name>Q</name>
