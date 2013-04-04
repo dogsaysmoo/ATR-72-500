@@ -176,6 +176,16 @@
 							</script>
 						</binding>
 					</item>
+					<item>
+						<name>tiller</name>
+						<label>Tiller steering</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							 ATR_72.dialogs.tiller.open();
+							</script>
+						</binding>
+					</item>
 				</menu>
 			</default>
 		</menubar>
@@ -245,7 +255,7 @@
 		</engines>
 		<gear>
 			<brake-parking type="bool">true</brake-parking>
-			<enable-tiller type="bool" archive="y">true</enable-tiller>
+			<enable-tiller type="bool" archive="y">false</enable-tiller>
 			<steering-deg type="double">0</steering-deg>
 			<tiller-steering-deg type="double">0</tiller-steering-deg>
 		</gear>
@@ -334,7 +344,6 @@
 
 	<input>
 		<keyboard>
-			<!-- Engine controls -->
 			<key n="123">
 				<name>{</name>
 				<desc>Decrease start switch setting/decrease condition</desc>
@@ -342,15 +351,7 @@
 				<binding>
 					<command>nasal</command>
 					<script>
-					 var alt = props.globals.getNode("devices/status/keyboard/event/modifier/alt").getBoolValue();
-					 if (alt)
-					  {
-					  ATR_72.incCondition(-0.05);
-					  }
-					 else
-					  {
 					  ATR_72.incStarter(-1);
-					  }
 					</script>
 				</binding>
 			</key>
@@ -361,18 +362,33 @@
 				<binding>
 					<command>nasal</command>
 					<script>
-					 var alt = props.globals.getNode("devices/status/keyboard/event/modifier/alt").getBoolValue();
-					 if (alt)
-					  {
-					  ATR_72.incCondition(0.05);
-					  }
-					 else
-					  {
 					  ATR_72.incStarter(1);
-					  }
 					</script>
 				</binding>
 			</key>
+			<key n="109">
+				<name>m</name>
+				<desc>Increase condition</desc>
+				<repeatable type="bool">true</repeatable>
+				<binding>
+					<command>nasal</command>
+					<script>
+					  ATR_72.incCondition(0.05);
+					</script>
+				</binding>
+			</key>
+			<key n="77">
+				<name>M</name>
+				<desc>Decrease condition</desc>
+				<repeatable type="bool">true</repeatable>
+				<binding>
+					<command>nasal</command>
+					<script>
+					  ATR_72.incCondition(-0.05);
+					</script>
+				</binding>
+			</key>
+
 			<!-- Tiller steering -->
 			<key n="81">
 				<name>Q</name>
