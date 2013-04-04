@@ -17,11 +17,11 @@
 		<desc>Decrease engine start switch setting</desc>
 	</key>
 	<key>
-		<name>Alt-}</name>
+		<name>m</name>
 		<desc>Increase engine condition</desc>
 	</key>
 	<key>
-		<name>Alt-{</name>
+		<name>M</name>
 		<desc>Decrease engine condition</desc>
 	</key>
 	<key>
