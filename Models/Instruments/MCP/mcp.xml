@@ -238,8 +238,10 @@
 		<alignment>left-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">text-value</type>
-		<format type="string">NAV</format>
-		<property>autopilot/serviceable</property>
+		<!--format type="string">NAV</format-->
+		<!--format>%s</format-->
+		<property>autopilot/settings/nav-src</property>
+		<!--property>autopilot/serviceable</property-->
 		<font>lcd.txf</font>
 		<character-size>0.01</character-size>
 		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
@@ -1003,6 +1005,62 @@
 			<green>0.753</green>
 			<blue>0.471</blue>
 		</emission>
+	</animation>
+
+	<animation>
+		<name>CPL Button pick</name>
+		<type>pick</type>
+		<object-name>CPL</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<condition>
+					<property>autopilot/settings/gps-driving-true-heading</property>
+				</condition>
+				<command>property-cycle</command>
+				<property>autopilot/settings/nav-src</property>
+				<value>NAV1</value>
+				<value>NAV2</value>
+				<value>FMS</value>
+			</binding>
+			<binding>
+				<condition>
+					<not>
+						<property>autopilot/settings/gps-driving-true-heading</property>
+					</not>
+				</condition>
+				<command>property-cycle</command>
+                                <property>autopilot/settings/nav-src</property>
+                                <value>NAV1</value>
+                                <value>NAV2</value>
+			</binding>
+		</action>
+		<action>
+                        <button>1</button>
+                        <repeatable type="bool">false</repeatable>
+                        <binding>
+                                <condition>
+                                        <property>autopilot/settings/gps-driving-true-heading</property>
+                                </condition>
+                                <command>property-cycle</command>
+                                <property>autopilot/settings/nav-src</property>
+                                <value>FMS</value>
+                                <value>NAV2</value>
+                                <value>NAV1</value>
+                        </binding>
+                        <binding>
+                                <condition>
+                                        <not>
+                                                <property>autopilot/settings/gps-driving-true-heading</property>
+                                        </not>
+                                </condition>
+                                <command>property-cycle</command>
+                                <property>autopilot/settings/nav-src</property>
+                                <value>NAV2</value>
+                                <value>NAV1</value>
+                        </binding>
+                </action>
 	</animation>
 
 	<animation>
