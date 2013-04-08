@@ -282,7 +282,7 @@
 			<cockpit-lights type="bool">false</cockpit-lights>
 			<cabin-lights type="bool">false</cabin-lights>
 			<panel-lights type="bool">false</panel-lights>
-			<cones type="bool">true</cones>
+			<cones type="bool">false</cones>
 		</lighting>
 		<switches>
 			<no-smoking-sign type="bool">false</no-smoking-sign>

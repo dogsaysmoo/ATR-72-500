@@ -643,6 +643,7 @@
 				</equals>
 			</and>
 		</input>
+		<output>/autopilot/internal/approach-hold</output>
 	</logic>
 	<pid-controller>
 		<name>Glideslope hold</name>

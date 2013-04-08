@@ -94,3 +94,26 @@ var pitch_wheel_down = func
   setprop("autopilot/settings/vertical-speed-fpm", vs_setting);
   }
  };
+
+var turn_anticipation = func {
+	if (getprop("autopilot/route-manager/active")) {
+		max_wpt=getprop("/autopilot/route-manager/route/num");
+		atm_wpt=getprop("/autopilot/route-manager/current-wp");
+		max_wpt-=1;
+		if (getprop("/autopilot/route-manager/wp/eta")=="0:20" and getprop("/autopilot/route-manager/wp/dist")<15){
+			if (getprop("/autopilot/route-manager/current-wp")<=max_wpt){
+				atm_wpt+=1;
+				props.globals.getNode("/autopilot/route-manager/current-wp").setValue(atm_wpt);
+			}
+		}
+	settimer(turn_anticipation, 0.5);
+	}
+}
+
+setlistener("autopilot/route-manager/active", func(fms) {
+	var active = fms.getBoolValue();
+	if (active) {
+		turn_anticipation();
+	}
+},0,0);
+
