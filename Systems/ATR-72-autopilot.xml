@@ -227,7 +227,11 @@
 		<input>
 			<and>
 				<not>
-					<property>/autopilot/settings/gps-driving-true-heading</property>
+					<!--property>/autopilot/settings/gps-driving-true-heading</property-->
+					<equals>
+					<property>/autopilot/settings/nav-src</property>
+					<value>FMS</value>
+					</equals>
 				</not>
 				<or>
 					<equals>
@@ -243,6 +247,52 @@
 		</input>
 		<output>/autopilot/internal/nav-hold-loc</output>
 	</logic>
+	<filter>
+		<name>nav2 track error computer</name>
+		<debug>false</debug>
+		<type>gain</type>
+		<input>
+			<property>instrumentation/nav[1]/radials/target-auto-hdg-deg</property>
+			<offset>
+				<property>orientation/track-deg</property>
+				<scale>-1.0</scale>
+			</offset>
+		</input>
+		<output>autopilot/internal/nav2-track-error-deg</output>
+		<period>
+			<min>-180</min>
+			<max>180</max>
+		</period>
+		<gain>1.0</gain>
+	</filter>
+	<filter>
+                <name>NAV1 channel set</name>
+                <type>gain</type>
+                <debug type="bool">false</debug>
+                <gain>1.0</gain>
+                <enable>
+                        <prop>/autopilot/settings/nav-src</prop>
+                        <value>NAV1</value>
+                </enable>
+                <input>
+                        <prop>/autopilot/internal/nav1-track-error-deg</prop>
+                </input>
+                <output>/autopilot/internal/nav-track-error-deg</output>
+        </filter>
+	<filter>
+                <name>NAV2 channel set</name>
+                <type>gain</type>
+                <debug type="bool">false</debug>
+                <gain>1.0</gain>
+                <enable>
+                        <prop>/autopilot/settings/nav-src</prop>
+                        <value>NAV2</value>
+                </enable>
+                <input>
+                        <prop>/autopilot/internal/nav2-track-error-deg</prop>
+                </input>
+                <output>/autopilot/internal/nav-track-error-deg</output>
+        </filter>
 	<pid-controller>
 		<name>NAV hold stage 1 (LOC mode)</name>
 		<debug type="bool">false</debug>
@@ -251,7 +301,7 @@
 			<value type="bool">true</value>
 		</enable>
 		<input>
-			<prop>/autopilot/internal/nav1-track-error-deg</prop>
+			<prop>/autopilot/internal/nav-track-error-deg</prop>
 		</input>
 		<reference>
 			<value>0</value>
@@ -279,7 +329,11 @@
 		<name>NAV GPS/Route Manager hold logic</name>
 		<input>
 			<and>
-				<property>/autopilot/settings/gps-driving-true-heading</property>
+				<!--property>/autopilot/settings/gps-driving-true-heading</property-->
+				<equals>
+					<property>/autopilot/settings/nav-src</property>
+					<value>FMS</value>
+				</equals>
 				<equals>
 					<property>/autopilot/settings/lateral</property>
 					<value>nav1-hold</value>
@@ -589,6 +643,7 @@
 				</equals>
 			</and>
 		</input>
+		<output>/autopilot/internal/approach-hold</output>
 	</logic>
 	<pid-controller>
 		<name>Glideslope hold</name>

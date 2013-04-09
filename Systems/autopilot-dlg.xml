@@ -152,6 +152,42 @@
 
 	<group>
 		<layout>table</layout>
+		<button>
+			<legend>NAV Src</legend>
+			<halign>left</halign>
+			<binding>
+				<condition>
+					<property>autopilot/settings/gps-driving-true-heading</property>
+				</condition>
+				<command>property-cycle</command>
+				<property>autopilot/settings/nav-src</property>
+				<value>NAV1</value>
+				<value>NAV2</value>
+				<value>FMS</value>
+			</binding>
+			<binding>
+				<condition>
+					<not>
+						<property>autopilot/settings/gps-driving-true-heading</property>
+					</not>
+				</condition>
+				<command>property-cycle</command>
+				<property>autopilot/settings/nav-src</property>
+				<value>NAV1</value>
+				<value>NAV2</value>
+			</binding>
+		</button>
+		<text>
+			<label>xxxx</label>
+			<halign>center</halign>
+			<property>autopilot/settings/nav-src</property>
+			<live type="bool">true</live>
+		</text>
+	</group>
+			
+				
+	<group>
+		<layout>table</layout>
 
 		<text>
 			<row>0</row>

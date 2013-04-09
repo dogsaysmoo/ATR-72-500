@@ -222,6 +222,7 @@
 			<target-speed-kt type="double">180</target-speed-kt>'
 			<vertical-speed-fpm type="double">1800</vertical-speed-fpm>
 			<bank-limit-deg type="double">27</bank-limit-deg>
+			<nav-src type="string">NAV1</nav-src>
 		</settings>
 	</autopilot>
 
@@ -281,7 +282,7 @@
 			<cockpit-lights type="bool">false</cockpit-lights>
 			<cabin-lights type="bool">false</cabin-lights>
 			<panel-lights type="bool">false</panel-lights>
-			<cones type="bool">true</cones>
+			<cones type="bool">false</cones>
 		</lighting>
 		<switches>
 			<no-smoking-sign type="bool">false</no-smoking-sign>
