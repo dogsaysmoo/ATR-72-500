@@ -48,6 +48,10 @@
 						<property>engines/engine[0]/n2</property>
 						<value>5</value>
 					</greater-than>
+					<greater-than>
+						<property>engines/engine[0]/n1</property>
+						<value>0.2</value>
+					</greater-than>
 					<not>
 						<property>sim/current-view/internal</property>
 					</not>
@@ -114,6 +118,10 @@
 					<greater-than>
 						<property>engines/engine[1]/n2</property>
 						<value>5</value>
+					</greater-than>
+					<greater-than>
+						<property>engines/engine[1]/n1</property>
+						<value>0.2</value>
 					</greater-than>
 					<not>
 						<property>sim/current-view/internal</property>
@@ -226,6 +234,28 @@
 				<property>sim/sound/effects/volume</property>
 				<factor>1.5</factor>
 			</volume>
+		</gear>
+		<gear>
+			<name>Left main gear touchdown</name>
+                        <path>/Sounds/squeal.wav</path>
+                        <mode>once</mode>
+                        <condition>
+                                <property>gear/gear[1]/wow</property>
+                        </condition>
+                        <volume>
+                                <offset>-0.75</offset>
+                        </volume>
+                </gear>
+                <gear>
+                        <name>Right main gear touchdown</name>
+                        <path>/Sounds/squeal.wav</path>
+                        <mode>once</mode>
+                        <condition>
+                                <property>gear/gear[2]/wow</property>
+                        </condition>
+                        <volume>
+                                <offset>-0.75</offset>
+                        </volume>
 		</gear>
 
 		<!-- Switch effects -->
