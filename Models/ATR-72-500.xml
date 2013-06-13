@@ -331,6 +331,23 @@
 		</center>
 	</animation>
 	<animation>
+		<name>Elevators</name>
+		<type>rotate</type>
+		<object-name>Hstabs</object-name>
+		<property>controls/flight/elevator</property>
+		<factor>20</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>12.551</x-m>
+			<y-m>0</y-m>
+			<z-m>2.908</z-m>
+		</center>
+	</animation>
+	<!--animation>
 		<name>Left elevator</name>
 		<type>rotate</type>
 		<object-name>ElevatorL</object-name>
@@ -359,7 +376,7 @@
 			<y2-m>0.18</y2-m>
 			<z2-m>2.91</z2-m>
 		</axis>
-	</animation>
+	</animation-->
 
 	<!-- Rudder -->
 	<animation>
@@ -995,6 +1012,8 @@
 		<type>material</type>
 		<object-name>Fuselage</object-name>
 		<object-name>Hstabs</object-name>
+		<object-name>ElevatorL</object-name>
+		<object-name>ElevatorR</object-name>
 		<object-name>Wings</object-name>
 		<object-name>Vstab</object-name>
 		<property-base>sim/model/livery</property-base>

@@ -20,8 +20,8 @@
 		<control-setting axis="/controls/engines/engine[1]/condition-lever" value="1.0" />
 		<control-setting axis="/systems/hydraulics/blue/flight/flaps" value="1.0" />
 		<control-setting axis="/systems/hydraulics/green/gear/gear-down" value="1.0" />
-		<solve-weight idx="0" weight="600" />
-		<solve-weight idx="1" weight="8829" />
+		<!--solve-weight idx="0" weight="600" />
+		<solve-weight idx="1" weight="8829" /-->
 	</approach>
 
 	<!-- Service ceiling is actually 25000 ft -->
@@ -32,8 +32,8 @@
 		<control-setting axis="/controls/engines/engine[1]/condition-lever" value="1.0" />
 		<control-setting axis="/systems/hydraulics/blue/flight/flaps" value="0.0" />
 		<control-setting axis="/systems/hydraulics/green/gear/gear-down" value="0.0" />
-		<solve-weight idx="0" weight="600" />
-		<solve-weight idx="1" weight="8829" />
+		<!--solve-weight idx="0" weight="600" />
+		<solve-weight idx="1" weight="8829" /-->
 	</cruise>
 
 	<cockpit x="11.0" y="0.6" z="-1.0" />
@@ -140,7 +140,7 @@
 	</thruster>
 
 	<!-- Nosegear -->
-	<gear x="11.837" y="0.0" z="-3.747" compression="0.3">
+	<gear x="11.837" y="0.0" z="-3.747" compression="0.3" sfric="0.7" dfric="0.5">
 		<control-input axis="/controls/gear/steering-deg" control="STEER" src0="-60" dst0="-1" src1="60" dst1="1" />
 		<control-input axis="/systems/hydraulics/green/gear/gear-down" control="EXTEND" />
 		<control-output control="EXTEND" prop="/gear/gear[0]/position-norm" />
