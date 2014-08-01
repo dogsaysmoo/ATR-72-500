@@ -343,6 +343,12 @@
 		</nav-compass>
 	</instrumentation>
 
+	<limits>
+		<mass-and-balance>
+			<maximum-takeoff-mass-lbs>49604</maximum-takeoff-mass-lbs>
+		</mass-and-balance>
+	</limits>
+
 	<input>
 		<keyboard>
 			<key n="123">

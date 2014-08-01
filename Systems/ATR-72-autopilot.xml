@@ -365,8 +365,13 @@
 			<gamma>0</gamma>
 			<Ti>10</Ti>
 			<Td>0.00001</Td>
-			<u_min>-25</u_min>
-			<u_max>25</u_max>
+			<u_min>
+				<prop>autopilot/settings/bank-limit-deg</prop>
+				<scale>-1</scale>
+			</u_min>
+			<u_max>
+				<prop>autopilot/settings/bank-limit-deg</prop>
+			</u_max>
 		</config>
 	</pid-controller>
 	<pid-controller>

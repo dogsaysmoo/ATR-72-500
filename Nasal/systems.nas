@@ -136,3 +136,14 @@ var dialogs =
  tiller: gui.Dialog.new("sim/gui/tiller/dialog", "Aircraft/ATR-72-500/Systems/tiller-dlg.xml"),
  autopilot: gui.Dialog.new("sim/gui/autopilot/dialog", "Aircraft/ATR-72-500/Systems/autopilot-dlg.xml")
  };
+
+
+## This is for the ferry tank.  It is only going to be selected when the xfeed is on.
+#setlistener("controls/fuel/x-feed", func (xfeed) {
+#  if (xfeed.getBoolValue() and !getprop("consumables/fuel/tank[2]/empty")) {
+#	setprop("consumables/fuel/tank[2]/selected",1);
+#  } else {
+#	setprop("consumables/fuel/tank[2]/selected",0);
+#  }
+#},0,0);
+

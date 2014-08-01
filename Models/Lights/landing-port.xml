@@ -9,6 +9,7 @@
 		<type>select</type>
 		<object-name>Light</object-name>
 		<object-name>Cone</object-name>
+		<object-name>Cone-texture</object-name>
 		<condition>
 			<greater-than>
 				<property>systems/electrical/outputs/landing-lights[0]</property>
@@ -20,6 +21,7 @@
 		<name>Cone on/off</name>
 		<type>select</type>
 		<object-name>Cone</object-name>
+		<object-name>Cone-texture</object-name>
 		<condition>
 			<property>controls/lighting/cones</property>
 		</condition>
