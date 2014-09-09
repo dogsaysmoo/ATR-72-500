@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- ATR 72 standby attitude indicator -->
+<!-- By Skyop -->
+
+<PropertyList>
+
+	<path>ai.ac</path>
+
+	<!-- PARAMETERS -->
+	<params>
+		<indicated-pitch-deg>instrumentation/attitude-indicator[0]/indicated-pitch-deg</indicated-pitch-deg>
+		<indicated-roll-deg>instrumentation/attitude-indicator[0]/indicated-roll-deg</indicated-roll-deg>
+	</params>
+
+ 	<!-- ANIMATIONS -->
+	<!-- Lighting -->
+	<animation>
+		<name>Instrument illumination</name>
+		<type>material</type>
+		<object-name>ball</object-name>
+		<object-name>riminside</object-name>
+		<object-name>rollarrow</object-name>
+		<object-name>rollindex</object-name>
+		<emission>
+			<red>0.14</red>
+			<green>0.05</green>
+			<blue>0.03</blue>
+			<factor-prop>controls/lighting/instruments-norm</factor-prop>
+		</emission>
+	</animation>
+
+	<!-- Attitude indicator -->
+	<animation>
+		<name>Attitude indicator</name>
+		<type>texmultiple</type>
+		<object-name>ball</object-name>
+		<transform>
+			<subtype>textranslate</subtype>
+			<property alias="../../../params/indicated-pitch-deg" />
+			<factor>0.003076172</factor>
+			<axis>
+				<x>0</x>
+				<y>1</y>
+			</axis>
+		</transform>
+		<transform>
+			<subtype>texrotate</subtype>
+			<property alias="../../../params/indicated-roll-deg" />
+			<axis>
+				<x>0</x>
+				<y>0</y>
+				<z>-1</z>
+			</axis>
+			<center>
+				<x>0.25</x>
+				<y>0.5</y>
+			</center>
+		</transform>
+	</animation>
+
+	<animation>
+		<name>Roll pointer</name>
+		<type>rotate</type>
+		<object-name>rollarrow</object-name>
+		<property alias="../../params/indicated-roll-deg" />
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+</PropertyList>

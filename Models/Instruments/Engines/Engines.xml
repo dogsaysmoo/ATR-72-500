@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<path>engines.ac</path>
+
+	<!-- Lighting -->
+	<animation>
+		<name>Face lighting</name>
+		<type>material</type>
+		<object-name>GaugeFaces</object-name>
+		<condition>
+			<greater-than>
+				<property>systems/electrical/outputs/panel-lights</property>
+				<value>15</value>
+			</greater-than>
+		</condition>
+		<emission>
+			<red>0.2</red>
+			<green>0.2</green>
+			<blue>0.2</blue>
+		</emission>
+	</animation>
+
+	<!-- Torque -->
+	<animation>
+		<name>Left engine torque</name>
+		<type>rotate</type>
+		<object-name>TorqueL</object-name>
+		<property>engines/engine[0]/torque-ftlb</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>24</dep></entry>	<!-- 0% and lower -->
+			<entry><ind>1000</ind><dep>4</dep></entry>	<!-- 10% -->
+			<entry><ind>2000</ind><dep>-15</dep></entry>	<!-- 20% -->
+			<entry><ind>3000</ind><dep>-33</dep></entry>	<!-- 30% -->
+			<entry><ind>4000</ind><dep>-52</dep></entry>	<!-- 40% -->
+			<entry><ind>5000</ind><dep>-70</dep></entry>	<!-- 50% -->
+			<entry><ind>6000</ind><dep>-89</dep></entry>	<!-- 60% -->
+			<entry><ind>7000</ind><dep>-108</dep></entry>	<!-- 70% -->
+			<entry><ind>8000</ind><dep>-127</dep></entry>	<!-- 80% -->
+			<entry><ind>9000</ind><dep>-146</dep></entry>	<!-- 90% -->
+			<entry><ind>10000</ind><dep>-165</dep></entry>	<!-- 100% -->
+			<entry><ind>11000</ind><dep>-184</dep></entry>	<!-- 110% -->
+			<entry><ind>12000</ind><dep>-203</dep></entry>	<!-- 120% -->
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.04224</y-m>
+			<z-m>0.10032</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>Right engine torque</name>
+		<type>rotate</type>
+		<object-name>TorqueR</object-name>
+		<property>engines/engine[1]/torque-ftlb</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>24</dep></entry>	<!-- 0% and lower -->
+			<entry><ind>1000</ind><dep>4</dep></entry>	<!-- 10% -->
+			<entry><ind>2000</ind><dep>-15</dep></entry>	<!-- 20% -->
+			<entry><ind>3000</ind><dep>-33</dep></entry>	<!-- 30% -->
+			<entry><ind>4000</ind><dep>-52</dep></entry>	<!-- 40% -->
+			<entry><ind>5000</ind><dep>-70</dep></entry>	<!-- 50% -->
+			<entry><ind>6000</ind><dep>-89</dep></entry>	<!-- 60% -->
+			<entry><ind>7000</ind><dep>-108</dep></entry>	<!-- 70% -->
+			<entry><ind>8000</ind><dep>-127</dep></entry>	<!-- 80% -->
+			<entry><ind>9000</ind><dep>-146</dep></entry>	<!-- 90% -->
+			<entry><ind>10000</ind><dep>-165</dep></entry>	<!-- 100% -->
+			<entry><ind>11000</ind><dep>-184</dep></entry>	<!-- 110% -->
+			<entry><ind>12000</ind><dep>-203</dep></entry>	<!-- 120% -->
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0.04224</y-m>
+			<z-m>0.10032</z-m>
+		</center>
+	</animation>
+
+	<!-- Np (RPM) -->
+	<animation>
+		<name>Left engine np</name>
+		<type>rotate</type>
+		<object-name>NpL</object-name>
+		<property>engines/engine[0]/n2</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>24</dep></entry>	<!-- 0% and lower -->
+			<entry><ind>10</ind><dep>4</dep></entry>	<!-- 10% -->
+			<entry><ind>20</ind><dep>-15</dep></entry>	<!-- 20% -->
+			<entry><ind>30</ind><dep>-33</dep></entry>	<!-- 30% -->
+			<entry><ind>40</ind><dep>-52</dep></entry>	<!-- 40% -->
+			<entry><ind>50</ind><dep>-70</dep></entry>	<!-- 50% -->
+			<entry><ind>60</ind><dep>-89</dep></entry>	<!-- 60% -->
+			<entry><ind>70</ind><dep>-108</dep></entry>	<!-- 70% -->
+			<entry><ind>80</ind><dep>-127</dep></entry>	<!-- 80% -->
+			<entry><ind>90</ind><dep>-146</dep></entry>	<!-- 90% -->
+			<entry><ind>100</ind><dep>-165</dep></entry>	<!-- 100% -->
+			<entry><ind>110</ind><dep>-184</dep></entry>	<!-- 110% -->
+			<entry><ind>120</ind><dep>-203</dep></entry>	<!-- 120% -->
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.04224</y-m>
+			<z-m>0.01584</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>Right engine np</name>
+		<type>rotate</type>
+		<object-name>NpR</object-name>
+		<property>engines/engine[1]/n2</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>24</dep></entry>	<!-- 0% and lower -->
+			<entry><ind>10</ind><dep>4</dep></entry>	<!-- 10% -->
+			<entry><ind>20</ind><dep>-15</dep></entry>	<!-- 20% -->
+			<entry><ind>30</ind><dep>-33</dep></entry>	<!-- 30% -->
+			<entry><ind>40</ind><dep>-52</dep></entry>	<!-- 40% -->
+			<entry><ind>50</ind><dep>-70</dep></entry>	<!-- 50% -->
+			<entry><ind>60</ind><dep>-89</dep></entry>	<!-- 60% -->
+			<entry><ind>70</ind><dep>-108</dep></entry>	<!-- 70% -->
+			<entry><ind>80</ind><dep>-127</dep></entry>	<!-- 80% -->
+			<entry><ind>90</ind><dep>-146</dep></entry>	<!-- 90% -->
+			<entry><ind>100</ind><dep>-165</dep></entry>	<!-- 100% -->
+			<entry><ind>110</ind><dep>-184</dep></entry>	<!-- 110% -->
+			<entry><ind>120</ind><dep>-203</dep></entry>	<!-- 120% -->
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0.04224</y-m>
+			<z-m>0.01584</z-m>
+		</center>
+	</animation>
+
+	<!-- ITT -->
+	<animation>
+		<name>Left engine ITT</name>
+		<type>rotate</type>
+		<object-name>ITTL</object-name>
+		<property>engines/engine[0]/torque-ftlb</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>27</dep></entry>	<!-- 0% and lower -->
+			<entry><ind>12000</ind><dep>-167</dep></entry>	<!-- 100% -->
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.04224</y-m>
+			<z-m>-0.06864</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>Right engine ITT</name>
+		<type>rotate</type>
+		<object-name>ITTR</object-name>
+		<property>engines/engine[1]/torque-ftlb</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>27</dep></entry>	<!-- 0% and lower -->
+			<entry><ind>12000</ind><dep>-167</dep></entry>	<!-- 100% -->
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0.04224</y-m>
+			<z-m>-0.06864</z-m>
+		</center>
+	</animation>
+
+	<!-- Nh-Nl (RPM?) -->
+	<animation>
+		<name>Left engine nh-nl</name>
+		<type>rotate</type>
+		<object-name>NhNlL</object-name>
+		<property>engines/engine[0]/n2</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>24</dep></entry>	<!-- 0% and lower -->
+			<entry><ind>10</ind><dep>4</dep></entry>	<!-- 10% -->
+			<entry><ind>20</ind><dep>-15</dep></entry>	<!-- 20% -->
+			<entry><ind>30</ind><dep>-33</dep></entry>	<!-- 30% -->
+			<entry><ind>40</ind><dep>-52</dep></entry>	<!-- 40% -->
+			<entry><ind>50</ind><dep>-70</dep></entry>	<!-- 50% -->
+			<entry><ind>60</ind><dep>-89</dep></entry>	<!-- 60% -->
+			<entry><ind>70</ind><dep>-108</dep></entry>	<!-- 70% -->
+			<entry><ind>80</ind><dep>-127</dep></entry>	<!-- 80% -->
+			<entry><ind>90</ind><dep>-146</dep></entry>	<!-- 90% -->
+			<entry><ind>100</ind><dep>-165</dep></entry>	<!-- 100% -->
+			<entry><ind>110</ind><dep>-184</dep></entry>	<!-- 110% -->
+			<entry><ind>120</ind><dep>-203</dep></entry>	<!-- 120% -->
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.04224</y-m>
+			<z-m>-0.15312</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>Right engine nh-nl</name>
+		<type>rotate</type>
+		<object-name>NhNlR</object-name>
+		<property>engines/engine[1]/n2</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>24</dep></entry>	<!-- 0% and lower -->
+			<entry><ind>10</ind><dep>4</dep></entry>	<!-- 10% -->
+			<entry><ind>20</ind><dep>-15</dep></entry>	<!-- 20% -->
+			<entry><ind>30</ind><dep>-33</dep></entry>	<!-- 30% -->
+			<entry><ind>40</ind><dep>-52</dep></entry>	<!-- 40% -->
+			<entry><ind>50</ind><dep>-70</dep></entry>	<!-- 50% -->
+			<entry><ind>60</ind><dep>-89</dep></entry>	<!-- 60% -->
+			<entry><ind>70</ind><dep>-108</dep></entry>	<!-- 70% -->
+			<entry><ind>80</ind><dep>-127</dep></entry>	<!-- 80% -->
+			<entry><ind>90</ind><dep>-146</dep></entry>	<!-- 90% -->
+			<entry><ind>100</ind><dep>-165</dep></entry>	<!-- 100% -->
+			<entry><ind>110</ind><dep>-184</dep></entry>	<!-- 110% -->
+			<entry><ind>120</ind><dep>-203</dep></entry>	<!-- 120% -->
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0.04224</y-m>
+			<z-m>-0.15312</z-m>
+		</center>
+	</animation>
+
+	<!-- Fuel flow -->
+	<animation>
+		<name>Left engine fuel flow</name>
+		<type>rotate</type>
+		<object-name>FFL</object-name>
+		<property>engines/engine[0]/fuel-flow-gph</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>19</dep></entry>	<!-- 0 and lower -->
+			<entry><ind>230</ind><dep>-199</dep></entry>	<!-- 700 kg/hr (229.659 gal/hr based on 6.72 lbs/gal) -->
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.04224</y-m>
+			<z-m>-0.2376</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>Right engine fuel flow</name>
+		<type>rotate</type>
+		<object-name>FFR</object-name>
+		<property>engines/engine[1]/fuel-flow-gph</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>19</dep></entry>	<!-- 0 and lower -->
+			<entry><ind>230</ind><dep>-199</dep></entry>	<!-- 700 kg/hr (229.659 gal/hr based on 6.72 lbs/gal) -->
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0.04224</y-m>
+			<z-m>-0.2376</z-m>
+		</center>
+	</animation>
+
+	<!-- Oil temperature/pressure -->
+	<animation>
+		<name>Left engine oil temperature</name>
+		<type>rotate</type>
+		<object-name>OilTempL</object-name>
+		<property>engines/engine[0]/torque-ftlb</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>43</dep></entry>	<!-- 0% and lower -->
+			<entry><ind>10000</ind><dep>-31</dep></entry>	<!-- 100% -->
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.12672</y-m>
+			<z-m>-0.2376</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>Left engine oil pressure</name>
+		<type>rotate</type>
+		<object-name>OilPressL</object-name>
+		<property>engines/engine[0]/n2</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>-43</dep></entry>	<!-- 0 and lower -->
+			<entry><ind>90</ind><dep>36</dep></entry>	<!-- 175 PSI -->
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.12672</y-m>
+			<z-m>-0.2376</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>Right engine oil temperature</name>
+		<type>rotate</type>
+		<object-name>OilTempR</object-name>
+		<property>engines/engine[1]/torque-ftlb</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>43</dep></entry>	<!-- 0% and lower -->
+			<entry><ind>10000</ind><dep>-31</dep></entry>	<!-- 100% -->
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0.12672</y-m>
+			<z-m>-0.2376</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>Right engine oil pressure</name>
+		<type>rotate</type>
+		<object-name>OilPressR</object-name>
+		<property>engines/engine[1]/n2</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>-43</dep></entry>	<!-- 0 and lower -->
+			<entry><ind>90</ind><dep>36</dep></entry>	<!-- 175 PSI -->
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0.12672</y-m>
+			<z-m>-0.2376</z-m>
+		</center>
+	</animation>
+
+</PropertyList>

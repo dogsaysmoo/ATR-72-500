@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+	<sim>
+		<model>
+			<livery>
+				<name>Air New Zealand Link by Mount Cook</name>
+				<texture>NZM.png</texture>
+				<configuration>pax</configuration>
+				<registration>ZK-MCB</registration>
+				<number-of-blades type="int">6</number-of-blades>
+			</livery>
+		</model>
+	</sim>
+</PropertyList>

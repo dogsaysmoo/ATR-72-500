@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- ATR 72 EADI -->
+<!-- By Skyop, adapted from the Sikorsky S-76 by Syd Adams -->
+
+<PropertyList>
+
+	<path>eadi.ac</path>
+
+	<!-- PARAMETERS -->
+	<params>
+		<indicated-pitch-deg>instrumentation/attitude-indicator[0]/indicated-pitch-deg</indicated-pitch-deg>
+		<indicated-roll-deg>instrumentation/attitude-indicator[0]/indicated-roll-deg</indicated-roll-deg>
+		<indicated-slip-skid>instrumentation/slip-skid-ball[0]/indicated-slip-skid</indicated-slip-skid>
+	</params>
+
+	<!-- ANIMATIONS -->
+	<animation>
+		<name>Power on/off</name>
+		<type>select</type>
+		<object-name>Off</object-name>
+		<condition>
+			<less-than>
+				<property>systems/electrical/outputs/efis</property>
+				<value>15</value>
+			</less-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<name>Attitude indicator</name>
+		<type>texmultiple</type>
+		<object-name>AI</object-name>
+		<transform>
+			<subtype>textranslate</subtype>
+			<property alias="../../../params/indicated-pitch-deg" />
+			<factor>0.0046</factor>
+			<axis>
+				<x>0</x>
+				<y>1</y>
+			</axis>
+		</transform>
+		<transform>
+			<subtype>texrotate</subtype>
+			<property alias="../../../params/indicated-roll-deg" />
+			<axis>
+				<x>0</x>
+				<y>0</y>
+				<z>-1</z>
+			</axis>
+			<center>
+				<x>0.5</x>
+				<y>0.5</y>
+			</center>
+		</transform>
+	</animation>
+
+	<animation>
+		<name>Attitude indicator roll pointer</name>
+		<type>rotate</type>
+		<object-name>RollPtr</object-name>
+		<property alias="../../params/indicated-roll-deg" />
+		<interpolation>
+			<entry><ind>-45</ind><dep>-45</dep></entry>
+			<entry><ind>45</ind><dep>45</dep></entry>
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0.0015</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<name>Flight director select</name>
+		<type>select</type>
+		<object-name>FDPitch</object-name>
+		<object-name>FDRoll</object-name>
+		<condition>
+			<property>autopilot/settings/flight-director</property>
+		</condition>
+	</animation>
+	<animation>
+		<name>Flight director pitch</name>
+		<type>translate</type>
+		<object-name>FDPitch</object-name>
+		<property>autopilot/internal/flight-director-pitch-deg</property>
+		<interpolation>
+			<entry><ind>-20</ind><dep>-0.026</dep></entry>
+			<entry><ind>0</ind><dep>-0.0008</dep></entry>
+			<entry><ind>20</ind><dep>0.0263</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	<animation>
+		<name>Flight director roll</name>
+		<type>translate</type>
+		<object-name>FDRoll</object-name>
+		<property>autopilot/internal/flight-director-roll-deg</property>
+		<interpolation>
+			<entry><ind>-20</ind><dep>-0.024</dep></entry>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>20</ind><dep>0.024</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<name>ILS lateral guide pointer select</name>
+		<type>select</type>
+		<object-name>ILSPtr</object-name>
+		<condition>
+			<and>
+				<property>instrumentation/nav[0]/nav-loc</property>
+				<property>instrumentation/nav[0]/in-range</property>
+			</and>
+		</condition>
+	</animation>
+	<animation>
+		<name>ILS lateral guide pointer translate</name>
+		<type>translate</type>
+		<object-name>ILSPtr</object-name>
+		<property>instrumentation/nav[0]/heading-needle-deflection</property>
+		<factor>0.0026</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<name>ILS glideslope guide pointer select</name>
+		<type>select</type>
+		<object-name>GSPtr</object-name>
+		<condition>
+			<property>instrumentation/nav[0]/gs-in-range</property>
+		</condition>
+	</animation>
+	<animation>
+		<name>ILS glideslope guide pointer translate</name>
+		<type>translate</type>
+		<object-name>GSPtr</object-name>
+		<property>instrumentation/nav[0]/gs-needle-deflection</property>
+		<factor>0.0026</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<name>Turn coordinator</name>
+		<type>rotate</type>
+		<object-name>TurnCoordPtr</object-name>
+		<property>instrumentation/slip-skid-ball/indicated-slip-skid</property>
+		<interpolation>
+			<entry><ind>-1.1</ind><dep>-6</dep></entry>
+			<entry><ind>1.1</ind><dep>6</dep></entry>
+		</interpolation>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0.055</z-m>
+		</center>
+	</animation>
+
+</PropertyList>

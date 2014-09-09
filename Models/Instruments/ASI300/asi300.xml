@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- ATR 72 airspeed indicator -->
+<!-- By Skyop, adapted from the B1900D by Syd Adams -->
+
+<PropertyList>
+
+	<path>asi300gauge.ac</path>
+
+	<!-- PARAMETERS -->
+	<params>
+		<airspeed-limit-kt>instrumentation/airspeed-indicator[0]/airspeed-limit-kt</airspeed-limit-kt>
+		<indicated-speed-kt>instrumentation/airspeed-indicator[0]/indicated-speed-kt</indicated-speed-kt>
+		<index n="0">instrumentation/airspeed-indicator[0]/index[0]</index>
+		<index n="1">instrumentation/airspeed-indicator[0]/index[1]</index>
+	</params>
+
+	<!-- ANIMATIONS -->
+	<animation>
+		<type>material</type>
+		<object-name>Face</object-name>
+		<object-name>Needle</object-name>
+		<object-name>OverspeedNeedle</object-name>
+		<object-name>index.pointer1</object-name>
+		<object-name>index.pointer2</object-name>
+		<emission>
+			<red>0.14</red>
+			<green>0.05</green>
+			<blue>0.03</blue>
+			<factor-prop>controls/lighting/instruments-norm</factor-prop>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>OverspeedNeedle</object-name>
+		<property alias="../../params/airspeed-limit-kt" />
+		<interpolation>
+		 	<entry><ind>0</ind><dep>-178</dep></entry>
+			<entry><ind>170</ind><dep>-178</dep></entry>
+			<entry><ind>240</ind><dep>-268</dep></entry>
+			<entry><ind>300</ind><dep>-333</dep></entry>
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Needle</object-name>
+		<property alias="../../params/indicated-speed-kt" />
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>30</ind><dep>0</dep></entry>
+			<entry><ind>40</ind><dep>-10</dep></entry>
+			<entry><ind>100</ind><dep>-88</dep></entry>
+			<entry><ind>170</ind><dep>-178</dep></entry>
+			<entry><ind>240</ind><dep>-268</dep></entry>
+			<entry><ind>300</ind><dep>-333</dep></entry>
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>index.pointer1</object-name>
+		<property alias="../../params/index[0]" />
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>30</ind><dep>0</dep></entry>
+			<entry><ind>40</ind><dep>-10</dep></entry>
+			<entry><ind>100</ind><dep>-88</dep></entry>
+			<entry><ind>170</ind><dep>-178</dep></entry>
+			<entry><ind>240</ind><dep>-268</dep></entry>
+			<entry><ind>300</ind><dep>-333</dep></entry>
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>index.pointer2</object-name>
+		<property alias="../../params/index[1]" />
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>30</ind><dep>0</dep></entry>
+			<entry><ind>40</ind><dep>-10</dep></entry>
+			<entry><ind>100</ind><dep>-88</dep></entry>
+			<entry><ind>170</ind><dep>-178</dep></entry>
+			<entry><ind>240</ind><dep>-268</dep></entry>
+			<entry><ind>300</ind><dep>-333</dep></entry>
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+</PropertyList>

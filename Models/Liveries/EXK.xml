@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+	<sim>
+		<model>
+			<livery>
+				<name>American Eagle</name>
+				<texture>EXK.png</texture>
+				<configuration>pax</configuration>
+				<registration>N420AT</registration>
+				<number-of-blades type="int">6</number-of-blades>
+			</livery>
+		</model>
+	</sim>
+</PropertyList>

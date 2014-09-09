@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+	<sim>
+		<model>
+			<livery>
+				<name>FedEx Feeder</name>
+				<texture>FDX.png</texture>
+				<configuration>cargo</configuration>
+				<registration>N820FX</registration>
+				<number-of-blades type="int">4</number-of-blades>
+			</livery>
+		</model>
+	</sim>
+</PropertyList>

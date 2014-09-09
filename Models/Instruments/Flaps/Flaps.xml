@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- ATR 72-500 for FlightGear -->
+<!-- Flap position indicator -->
+
+<PropertyList>
+
+	<path>flaps.ac</path>
+
+	<animation>
+		<name>Face lighting</name>
+		<type>material</type>
+		<object-name>Face</object-name>
+		<condition>
+			<greater-than>
+				<property>systems/electrical/outputs/panel-lights</property>
+				<value>15</value>
+			</greater-than>
+		</condition>
+		<emission>
+			<red>0.2</red>
+			<green>0.2</green>
+			<blue>0.2</blue>
+		</emission>
+	</animation>
+
+	<animation>
+		<name>Flap gauge</name>
+		<type>rotate</type>
+		<object-name>Needle</object-name>
+		<property>surface-positions/flap-pos-norm</property>
+		<interpolation>
+			<entry><ind>0.000</ind><dep>0</dep></entry>	<!-- 0 degrees -->
+			<entry><ind>0.357</ind><dep>-30</dep></entry>	<!-- 15 degrees -->
+			<entry><ind>0.714</ind><dep>-60</dep></entry>	<!-- 30 degrees -->
+			<entry><ind>1.000</ind><dep>-90</dep></entry>	<!-- 42 degrees (not on scale, emergency purposes only?) -->
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+	</animation>
+
+</PropertyList>
