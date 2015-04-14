@@ -20,8 +20,10 @@
 		<control-setting axis="/controls/engines/engine[1]/condition-lever" value="1.0" />
 		<control-setting axis="/systems/hydraulics/blue/flight/flaps" value="1.0" />
 		<control-setting axis="/systems/hydraulics/green/gear/gear-down" value="1.0" />
-		<!--solve-weight idx="0" weight="600" />
-		<solve-weight idx="1" weight="8829" /-->
+		<solve-weight idx="0" weight="600" />
+		<solve-weight idx="1" weight="8829" />
+		<solve-weight idx="2" weight="0" />
+		<!--solve-weight idx="1" weight="6259" /-->
 	</approach>
 
 	<!-- Service ceiling is actually 25000 ft -->
@@ -32,8 +34,10 @@
 		<control-setting axis="/controls/engines/engine[1]/condition-lever" value="1.0" />
 		<control-setting axis="/systems/hydraulics/blue/flight/flaps" value="0.0" />
 		<control-setting axis="/systems/hydraulics/green/gear/gear-down" value="0.0" />
-		<!--solve-weight idx="0" weight="600" />
-		<solve-weight idx="1" weight="8829" /-->
+		<solve-weight idx="0" weight="600" />
+		<solve-weight idx="1" weight="8829" />
+		<solve-weight idx="2" weight="0" />
+		<!--solve-weight idx="1" weight="6259" /-->
 	</cruise>
 
 	<cockpit x="11.0" y="0.6" z="-1.0" />
@@ -88,15 +92,15 @@
 		mass="396.8" 
 		moment="27.928" 
 		radius="1.965" 
-		cruise-power="4250" 
-		cruise-speed="414" 
+		cruise-power="2100" 
+		cruise-speed="280" 
 		cruise-rpm="1200.0" 
 		cruise-alt="20000.0" 
 		min-rpm="900.0" max-rpm="1300.0">
 
 		<turbine-engine
-            	eng-power="4573" eng-rpm="1020" alt="20000"
-            	flat-rating="4573" max-n2="101.5" bsfc="0.468"/>
+            	eng-power="2750" eng-rpm="1300" alt="15000"
+            	flat-rating="2475" min-n2="70" max-n2="100" bsfc="0.459"/>
 
 		<actionpt x="4.827" y="3.86" z="-0.61" />
 		<control-input axis="/controls/engines/engine[0]/throttle-lever" control="THROTTLE" />
@@ -111,15 +115,15 @@
 		mass="396.8" 
 		moment="-27.928" 
 		radius="1.965" 
-		cruise-power="4250" 
-		cruise-speed="414" 
+		cruise-power="2100"
+		cruise-speed="280"
 		cruise-rpm="1200.0" 
 		cruise-alt="20000.0"
 		min-rpm="900.0" max-rpm="1300.0">
 
 		<turbine-engine
-            	eng-power="4573" eng-rpm="1020" alt="10000"
-            	flat-rating="4573" max-n2="101.5" bsfc="0.468"/>
+            	eng-power="2750" eng-rpm="1300" alt="15000"
+            	flat-rating="2475" min-n2="70" max-n2="100" bsfc="0.459"/>
 
 		<actionpt x="4.827" y="-3.86" z="-0.61" />
 		<control-input axis="/controls/engines/engine[1]/throttle-lever" control="THROTTLE" />
@@ -170,11 +174,16 @@
 	<tank x="1.1" y="5.0" z="-0.2" jet="true" capacity="5512.0" />
 	<!-- Right wing fuel tank -->
 	<tank x="1.1" y="-5.0" z="-0.2" jet="true" capacity="5512.0" />
+	
+	<!-- Ferry Tank -->
+	<!--tank x="1.0" y="0.0" z="-1.5" jet="true" capacity="3212.0" /-->
 
 	<!-- Crew -->
 	<weight x="11.0" y="0.0" z="-1.5" mass-prop="/sim/weight[0]/weight-lb" idx="0" />
 	<!-- PAX/Cargo -->
 	<weight x="1.0" y="0.0" z="-1.5" mass-prop="/sim/weight[1]/weight-lb" idx="1" />
+	<!-- Extra Fuel tanks for ferry ops -->
+	<weight x="1.0" y="0.0" z="-1.5" mass-prop="/sim/weight[2]/weight-lb" idx="1" />
 
 	<!-- Ballast to adjust center of gravity -->
 	<ballast x="10.0" y="0.0" z="-2.0" mass="10000.0" />

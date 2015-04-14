@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+	<sim>
+		<model>
+			<livery>
+				<name>Planet Express</name>
+				<texture>PLX.png</texture>
+				<configuration>cargo</configuration>
+				<registration>N310PX</registration>
+				<number-of-blades type="int">6</number-of-blades>
+			</livery>
+		</model>
+	</sim>
+</PropertyList>

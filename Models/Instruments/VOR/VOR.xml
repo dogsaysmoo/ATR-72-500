@@ -35,9 +35,25 @@
 		<name>Heading rotate</name>
 		<type>rotate</type>
 		<object-name>Face</object-name>
+		<property alias="../../params/indicated-heading-deg" />
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<name>Heading rotate</name>
+		<type>rotate</type>
 		<object-name>Needle1VOR</object-name>
 		<object-name>Needle2VOR</object-name>
-		<property alias="../../params/indicated-heading-deg" />
+		<property>orientation/heading-deg</property>
 		<axis>
 			<x>1</x>
 			<y>0</y>
