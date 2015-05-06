@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+	<sim>
+		<model>
+			<livery>
+				<name>Israir Airlines</name>
+				<texture>Liveries/ISR.png</texture>
+				<configuration>pax</configuration>
+				<registration>4X-ATH</registration>
+				<number-of-blades type="int">6</number-of-blades>
+			</livery>
+		</model>
+	</sim>
+</PropertyList>
