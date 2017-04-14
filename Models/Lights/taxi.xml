@@ -20,6 +20,7 @@
 		<name>Cone on/off</name>
 		<type>select</type>
 		<object-name>Cone</object-name>
+		<object-name>Cone-texture</object-name>
 		<condition>
 			<property>controls/lighting/cones</property>
 		</condition>

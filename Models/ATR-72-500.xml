@@ -153,7 +153,12 @@
 	</model>
 	<model>
 		<name>Port landing light</name>
-		<path>Aircraft/ATR-72-500/Models/Lights/landing-port.xml</path>
+		<path>Aircraft/ATR-72-500/Models/Lights/landing.xml</path>
+                <overlay>
+                	<params>
+                		<volts>systems/electrical/outputs/landing-lights[0]</volts>
+                	</params>
+                </overlay>
 		<offsets>
 			<x-m>-4.5</x-m>
 			<y-m>-1</y-m>
@@ -171,7 +176,12 @@
 	</model>
 	<model>
 		<name>Starboard landing light</name>
-		<path>Aircraft/ATR-72-500/Models/Lights/landing-stbd.xml</path>
+		<path>Aircraft/ATR-72-500/Models/Lights/landing.xml</path>
+                <overlay>
+                	<params>
+                		<volts>systems/electrical/outputs/landing-lights[1]</volts>
+                	</params>
+                </overlay>
 		<offsets>
 			<x-m>-4.5</x-m>
 			<y-m>1</y-m>
