@@ -3,7 +3,7 @@
 <PropertyList>
 
 	<path>landing.ac</path>
-
+        <nopreview/>
 	<animation>
 		<name>On/off</name>
 		<type>select</type>
