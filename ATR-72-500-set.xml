@@ -9,6 +9,24 @@
 		<flight-model>yasim</flight-model>
 		<aero>ATR-72-500</aero>
 
+		<tags>
+			<tag>atr</tag>
+			<tag>high-wing</tag>
+			<tag>tricycle</tag>
+			<tag>retractable-gear</tag>
+			<tag>twin-engine</tag>
+			<tag>turboprop</tag>
+			<tag>variable-pitch</tag>
+			<tag>transport</tag>
+			<tag>cargo</tag>
+			<tag>t-tail</tag>
+			<tag>ifr</tag>
+			<tag>1980s</tag>
+			<tag>1990s</tag>
+			<tag>2000s</tag>
+			<tag>2010s</tag>
+		</tags>
+
 		<model>
 			<path>Aircraft/ATR-72-500/Models/ATR-72-500.xml</path>
 			<livery>
