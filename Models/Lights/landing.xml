@@ -3,16 +3,14 @@
 <PropertyList>
 
 	<path>landing.ac</path>
-
+        <nopreview/>
 	<animation>
 		<name>On/off</name>
 		<type>select</type>
 		<object-name>Light</object-name>
-		<object-name>Cone</object-name>
-		<object-name>Cone-texture</object-name>
 		<condition>
 			<greater-than>
-				<property>systems/electrical/outputs/landing-lights[0]</property>
+				<property alias="../../../../params/volts"/>
 				<value>5</value>
 			</greater-than>
 		</condition>
@@ -21,9 +19,15 @@
 		<name>Cone on/off</name>
 		<type>select</type>
 		<object-name>Cone</object-name>
-		<object-name>Cone-texture</object-name>
+                <object-name>Cone-texture</object-name>
 		<condition>
-			<property>controls/lighting/cones</property>
+                	<and>
+				<greater-than>
+					<property alias="../../../../../params/volts"/>
+					<value>5</value>
+				</greater-than>
+				<property>controls/lighting/cones</property>
+                        </and>
 		</condition>
 	</animation>
 
