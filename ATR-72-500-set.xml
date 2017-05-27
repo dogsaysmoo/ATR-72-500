@@ -9,6 +9,24 @@
 		<flight-model>yasim</flight-model>
 		<aero>ATR-72-500</aero>
 
+		<tags>
+			<tag>atr</tag>
+			<tag>high-wing</tag>
+			<tag>tricycle</tag>
+			<tag>retractable-gear</tag>
+			<tag>twin-engine</tag>
+			<tag>turboprop</tag>
+			<tag>variable-pitch</tag>
+			<tag>transport</tag>
+			<tag>cargo</tag>
+			<tag>t-tail</tag>
+			<tag>ifr</tag>
+			<tag>1980s</tag>
+			<tag>1990s</tag>
+			<tag>2000s</tag>
+			<tag>2010s</tag>
+		</tags>
+
 		<model>
 			<path>Aircraft/ATR-72-500/Models/ATR-72-500.xml</path>
 			<livery>
@@ -591,6 +609,12 @@
 		</keyboard>
 	</input>
 
+	<limits>
+		<mass-and-balance>
+			<maximum-takeoff-mass-lbs>49604</maximum-takeoff-mass-lbs>
+		</mass-and-balance>
+	</limits>
+
 	<nasal>
 		<ATR_72>
 			<file>Aircraft/ATR-72-500/Nasal/controls.nas</file>
@@ -607,6 +631,9 @@
 		<walk>
 			<file>Aircraft/ATR-72-500/Nasal/walk.nas</file>
 		</walk>
+		<limits>
+			<file>Aircraft/Generic/limits.nas</file>
+		</limits>
 	</nasal>
 
 </PropertyList>

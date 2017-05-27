@@ -3,7 +3,7 @@
 <PropertyList>
 
 	<path>rednav.ac</path>
-
+        <nopreview/>
 	<animation>
 		<name>On/off</name>
 		<type>select</type>

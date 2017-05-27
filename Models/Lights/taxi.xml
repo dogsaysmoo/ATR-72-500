@@ -3,13 +3,12 @@
 <PropertyList>
 
 	<path>landing.ac</path>
-
+        <nopreview/>
 	<animation>
 		<name>On/off</name>
 		<type>select</type>
 		<object-name>Light</object-name>
 		<object-name>Cone</object-name>
-		<object-name>Cone-texture</object-name>
 		<condition>
 			<greater-than>
 				<property>systems/electrical/outputs/taxi-lights</property>
@@ -32,7 +31,6 @@
 		<type>rotate</type>
 		<object-name>Light</object-name>
 		<object-name>Cone</object-name>
-		<object-name>Cone-texture</object-name>
 		<property>gear/gear[0]/steering-norm</property>
 		<factor>60</factor>
 		<axis>
